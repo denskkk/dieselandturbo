@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ремонт турбін - DIESEL & TURBO | Професійний ремонт в Одесі</title>
+  <meta name="description" content="Професійний ремонт турбокомпресорів в Одесі. Діагностика, відновлення, заміна турбін для всіх типів двигунів. Гарантія якості." />
+  <meta name="keywords" content="ремонт турбін, турбокомпресор, турбіна, балансування турбіни, VGT турбіна, Garrett, Holset, BorgWarner, IHI, дизель, Одеса" />
+  <meta name="author" content="DIESEL & TURBO" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ремонт турбін - DIESEL & TURBO | Професійний ремонт в Одесі" />
+  <meta property="og:description" content="Діагностика і ремонт турбокомпресорів в Одесі. Працюємо з турбінами Garrett, Holset, BorgWarner, IHI та інші. Гарантія якості." />
+  <meta property="og:image" content="https://dieselandturbo.com.ua/turbiny-repair-og.jpg" />
+  <meta property="og:url" content="https://dieselandturbo.com.ua/remont-turbin" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      scroll-behavior: smooth;
+    }
+    .bg-primary { background-color: #ffcc00; }
+    .text-primary { color: #ffcc00; }
+    .text-dark { color: #111111; }
+    .bg-dark { background-color: #111111; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    /* Optimize for mobile */
+    @media (max-width: 768px) {
+      .mobile-optimize {
+        font-size: 0.95rem;
+      }
+    }
+    
+    /* Improve accessibility */
+    a:focus, button:focus {
+      outline: 2px solid #ffcc00;
+      outline-offset: 2px;
+    }
+    
+    /* Optimize image display */
+    .service-image {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    
+    .turbo-card {
+      transition: all 0.3s ease;
+    }
+    
+    .turbo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(255, 204, 0, 0.1), 0 10px 10px -5px rgba(255, 204, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-dark text-white scroll-smooth">
+  
+<!-- Header -->
+<header class="bg-primary text-dark shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Логотип -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center" aria-label="DIESEL & TURBO">
+      DIESEL & TURBO
+    </a>
+
+    <!-- Десктопная навигация -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <!-- Выпадающее меню услуг для десктопа -->
+      <div class="relative group">
+        <button class="hover:text-black transition flex items-center" aria-expanded="false">
+          Послуги
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg hidden group-hover:block">
+          <div class="py-1 text-dark">
+            <a href="remont-pnvt.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт ТНВД</a>
+            <a href="remont-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт форсунок</a>
+            <a href="remont-nasos-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт насос-форсунок</a>
+            <a href="remont-turbin.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт турбін</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100 transition">Chip Tuning</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-gray-100 transition font-semibold">Всі послуги</a>
+          </div>
+        </div>
+      </div>
+      <a href="#advantages" class="hover:text-black transition">Переваги</a>
+      <a href="#reviews" class="hover:text-black transition">Відгуки</a>
+      <a href="#contact" class="hover:text-black transition">Контакти</a>
+    </nav>
+
+    <!-- Кнопка -->
+    <a href="#contact" class="hidden md:inline-block bg-dark text-white font-semibold px-5 py-2 rounded hover:bg-black transition">
+      Записатись
+    </a>
+
+    <!-- Mobile menu icon -->
+    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Відкрити меню">
+      <svg class="w-8 h-8" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-4 text-sm">
+    <!-- Выпадающее меню для мобильного -->
+    <div>
+      <button id="mobile-services-btn" class="flex items-center justify-between w-full text-dark hover:text-black transition">
+        Послуги
+        <svg id="mobile-services-icon" class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="mobile-services-submenu" class="hidden mt-2 pl-4 space-y-2">
+        <a href="remont-pnvt.html" class="block text-dark hover:text-black transition py-1">Ремонт ТНВД</a>
+        <a href="remont-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт форсунок</a>
+        <a href="remont-nasos-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт насос-форсунок</a>
+        <a href="remont-turbin.html" class="block text-dark hover:text-black transition py-1">Ремонт турбін</a>
+        <a href="chiptuning.html" class="block text-dark hover:text-black transition py-1">Chip Tuning</a>
+        <a href="#services" class="block text-dark hover:text-black transition py-1 font-semibold">Всі послуги</a>
+      </div>
+    </div>
+    <a href="#advantages" class="block text-dark hover:text-black transition">Переваги</a>
+    <a href="#reviews" class="block text-dark hover:text-black transition">Відгуки</a>
+    <a href="#contact" class="block text-dark hover:text-black transition">Контакти</a>
+    <a href="#contact" class="block bg-dark text-white text-center font-semibold px-4 py-2 rounded hover:bg-black transition">Записатись</a>
+  </div>
+</header>
+
+<!-- Breadcrumbs -->
+<div class="bg-[#1a1a1a] py-2">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-sm text-gray-400">
+      <a href="index.html" class="hover:text-primary transition">Головна</a> &gt; 
+      <span class="text-primary">Ремонт турбін</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-b from-[#111] to-[#1a1a1a] py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Ремонт турбін</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">Професійний ремонт та відновлення турбокомпресорів для легкових та вантажних автомобілів. Сучасне обладнання та досвідчені спеціалісти.</p>
+    </div>
+    
+    <!-- Головна секція з фото зліва і текстом справа -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Фото турбіни зліва -->
+      <div class="rounded-xl overflow-hidden shadow-lg" data-aos="fade-right">
+        <img src="turbo.png" alt="Ремонт турбін" class="w-full h-auto">
+      </div>
+      
+      <!-- Текст справа з кнопкою -->
+      <div data-aos="fade-left">
+        <h2 class="text-3xl font-bold text-primary mb-6">Відновлення турбокомпресорів будь-якої складності</h2>
+        
+        <div class="space-y-4 mb-8 text-gray-300">
+          <p>Турбіна - одна з найскладніших та найдорожчих систем у двигуні. Її несправність може призвести до серйозних проблем та значних фінансових витрат.</p>
+          
+          <p>Наша компанія <strong class="text-primary">DIESEL & TURBO</strong> виконує професійний ремонт турбін всіх типів та виробників: Garrett, Holset, BorgWarner, IHI, Mitsubishi, Toyota та інших.</p>
+          
+          <p>Ми проводимо повну діагностику, балансування, відновлення або заміну компонентів турбокомпресора.</p>
+          
+          <ul class="list-disc pl-6 space-y-2 mt-4">
+            <li>Ремонт турбін з рухомою геометрією (VGT/VNT)</li>
+            <li>Ремонт турбін з електронним управлінням</li>
+            <li>Відновлення вала турбіни</li>
+            <li>Балансування ротора</li>
+            <li>Заміна підшипників</li>
+          </ul>
+        </div>
+        
+        <a href="tel:+380989256116" class="inline-block bg-primary text-dark font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition text-lg">
+          Зателефонувати зараз
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Типи турбін -->
+<section class="py-20 bg-[#111] px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-16">Види турбін, які ми ремонтуємо</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Турбіни з фіксованою геометрією -->
+      <div class="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-lg turbo-card border border-gray-800" data-aos="fade-up">
+        <div class="relative">
+          <img src="turbogeom.jpg" alt="Турбіни з фіксованою геометрією" class="w-full h-66 object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-primary mb-3">Турбіни з фіксованою геометрією</h3>
+          <p class="text-gray-300 mb-4">Класичні турбокомпресори з нерегульованою геометрією для легкових і вантажних автомобілів. Ремонт включає заміну підшипників та відновлення крильчатки.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-primary font-bold">від 3500 грн</span>
+            <span class="text-gray-400 text-sm">Час: 1-3 дні</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Турбіни з рухомою геометрією -->
+      <div class="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-lg turbo-card border border-gray-800" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative">
+          <img src="ruhanageom-turno.jpg" alt="Турбіни з рухомою геометрією" class="w-full h-66 object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-primary mb-3">Турбіни з рухомою геометрією</h3>
+          <p class="text-gray-300 mb-4">Турбокомпресори VGT/VNT з можливістю регулювання потоку відпрацьованих газів. Складний ремонт з відновленням механізму зміни геометрії.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-primary font-bold">від 6000 грн</span>
+            <span class="text-gray-400 text-sm">Час: 2-4 дні</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Електронні турбіни -->
+      <div class="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-lg turbo-card border border-gray-800" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative">
+          <img src="elektonni turbo.png" alt="Електронні турбіни" class="w-full h-66 object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-primary mb-3">Електронні турбіни</h3>
+          <p class="text-gray-300 mb-4">Сучасні турбіни з електронним управлінням для нових дизельних та бензинових двигунів. Ремонт та перепрограмування електронних компонентів.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-primary font-bold">від 7500 грн</span>
+            <span class="text-gray-400 text-sm">Час: 3-5 днів</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Процес ремонту -->
+<section class="py-20 bg-[#1a1a1a] px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-16">Процес ремонту турбін</h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex flex-col items-center text-center" data-aos="fade-up">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">1</div>
+        <h3 class="text-xl font-semibold mb-3">Діагностика</h3>
+        <p class="text-gray-300">Комплексна перевірка турбіни з визначенням пошкоджень та причин виходу з ладу. Вимірювання люфта та балансу ротора.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">2</div>
+        <h3 class="text-xl font-semibold mb-3">Розбирання та чистка</h3>
+        <p class="text-gray-300">Повне розбирання турбокомпресора, ультразвукова чистка всіх компонентів від нагару та відкладень.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">3</div>
+        <h3 class="text-xl font-semibold mb-3">Відновлення</h3>
+        <p class="text-gray-300">Заміна пошкоджених деталей, відновлення ротора, встановлення нових підшипників та ущільнювачів.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">4</div>
+        <h3 class="text-xl font-semibold mb-3">Балансування і тестування</h3>
+        <p class="text-gray-300">Високоточне балансування ротора на спеціалізованому стенді, перевірка турбіни під навантаженням та контроль витоків.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ознаки несправності -->
+<section class="py-20 bg-[#111] px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Ознаки несправності турбіни</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800" data-aos="fade-right">
+        <h3 class="text-xl font-bold text-primary mb-4">Основні симптоми</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Значне падіння потужності двигуна</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Чорний або синій дим з вихлопної труби</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Підвищені обороти двигуна без прискорення</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Свистячий звук або виття під капотом</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Підвищена витрата масла</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800" data-aos="fade-left">
+        <h3 class="text-xl font-bold text-primary mb-4">Додаткові ознаки</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Збільшений вміст масла у випускному колекторі</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Поява помилок ЕБУ, пов'язаних з наддувом</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Заклинювання або важкий хід механізму VGT</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Низький тиск наддуву на високих обертах</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Деренчання або металеві звуки при прискоренні</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="mt-12 text-center" data-aos="fade-up">
+      <a href="#contact-form" class="inline-block bg-primary text-dark font-bold px-8 py-3 rounded-lg hover:bg-yellow-400 transition">
+        Діагностувати мою турбіну
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Відгуки -->
+<section class="py-20 bg-[#1a1a1a] px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Відгуки про ремонт турбін</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#111] p-6 rounded-xl shadow-md" data-aos="fade-up">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Відремонтували турбіну на моєму BMW X5. Все швидко і якісно. Працює як нова і коштувало значно менше, ніж купувати нову."</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Олександр, BMW X5</p>
+      </div>
+      <div class="bg-[#111] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Хлопці відновили VGT турбіну на моїй Шкоді. Все працює відмінно вже пів року. Рекомендую, зекономив майже 20 тисяч гривень."</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Віталій, Škoda Octavia</p>
+      </div>
+      <div class="bg-[#111] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Дуже вдячний за швидкий і професійний ремонт турбіни на вантажівці. Діагностика, ремонт, перевірка - все на вищому рівні!"</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Микола, Mercedes Actros</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Форма заявки -->
+<section id="contact-form" class="py-20 bg-dark px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-10">Замовити ремонт турбіни</h2>
+    
+    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg" data-aos="fade-up">
+      <form id="turboForm" class="space-y-4" action="submit.php" method="POST">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-1">Ім'я</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+          </div>
+          <div>
+            <label for="phone" class="block text-left text-sm font-medium text-gray-300 mb-1">Телефон</label>
+            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+          </div>
+        </div>
+        
+        <div>
+          <label for="turbo_type" class="block text-left text-sm font-medium text-gray-300 mb-1">Тип турбіни</label>
+          <select id="turbo_type" name="turbo_type" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+            <option value="">Виберіть тип турбіни</option>
+            <option value="Фіксована">Фіксована геометрія</option>
+            <option value="VGT/VNT">Змінна геометрія (VGT/VNT)</option>
+            <option value="Електронна">Електронна</option>
+            <option value="Не знаю">Не знаю</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="car" class="block text-left text-sm font-medium text-gray-300 mb-1">Автомобіль</label>
+          <input type="text" id="car" name="car" placeholder="Марка, модель, рік випуску" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+        </div>
+        
+        <div>
+          <label for="message" class="block text-left text-sm font-medium text-gray-300 mb-1">Опишіть проблему</label>
+          <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none"></textarea>
+        </div>
+        
+        <button type="submit" class="w-full bg-primary text-dark font-bold px-6 py-3 rounded hover:bg-yellow-400 transition">
+          Надіслати заявку
+        </button>
+      </form>
+    </div>
+    
+    <div class="mt-10 text-center">
+      <p class="text-gray-400">Або зателефонуйте нам:</p>
+      <a href="tel:+380989256116" class="text-2xl font-bold text-primary hover:text-yellow-300 transition">+38 (098) 925-61-16</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 bg-[#1a1a1a] px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Відповіді на питання</h2>
+    
+    <div class="space-y-6">
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up">
+        <h3 class="text-xl font-bold text-primary mb-3">Чи можна відремонтувати будь-яку турбіну?</h3>
+        <p class="text-gray-300">В більшості випадків так. Ми ремонтуємо турбіни всіх типів та виробників. Однак є випадки, коли пошкодження корпусу або критичне руйнування роторної частини роблять ремонт неможливим. У таких випадках ми запропонуємо варіанти заміни на нову або відновлену.</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="50">
+        <h3 class="text-xl font-bold text-primary mb-3">Скільки коштує ремонт турбіни?</h3>
+        <p class="text-gray-300">Вартість ремонту залежить від типу турбокомпресора, виробника та характеру пошкоджень. Діагностика коштує від 500 грн. Середня вартість ремонту турбін з фіксованою геометрією 3500-6000 грн, турбін VGT від 6000 грн, електронних турбін від 7500 грн.</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold text-primary mb-3">Скільки часу займає ремонт?</h3>
+        <p class="text-gray-300">Терміни ремонту залежать від складності робіт і наявності запчастин. Зазвичай для простих турбін терміни становлять 1-3 дні, для складних систем VGT/VNT 2-4 дні, для електронних турбін 3-5 днів.</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="text-xl font-bold text-primary mb-3">Яку гарантію ви надаєте?</h3>
+        <p class="text-gray-300">Ми надаємо гарантію 6-12 місяців на всі відремонтовані турбіни. Гарантія поширюється на всі виконані роботи та встановлені деталі. Важливо дотримуватися рекомендацій щодо експлуатації та обслуговування автомобіля після ремонту.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Переваги сервісу -->
+<section class="py-20 bg-dark px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Чому обирають нас</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#1a1a1a] p-6 rounded-xl" data-aos="fade-up">
+        <div class="text-primary text-4xl mb-4">
+          <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-2">Сучасне обладнання</h3>
+        <p class="text-gray-300">Використовуємо професійне діагностичне та ремонтне обладнання від провідних виробників для максимальної точності.</p>
+      </div>
+      
+      <div class="bg-[#1a1a1a] p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-primary text-4xl mb-4">
+          <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-2">Досвідчені фахівці</h3>
+        <p class="text-gray-300">Наші механіки мають багаторічний стаж роботи з турбінами та постійно підвищують свою кваліфікацію.</p>
+      </div>
+      
+      <div class="bg-[#1a1a1a] p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-primary text-4xl mb-4">
+          <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-2">Оригінальні запчастини</h3>
+        <p class="text-gray-300">Використовуємо тільки якісні комплектуючі від виробників або сертифіковані аналоги з гарантією.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-[#111] px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Ремонт турбін з гарантією</h2>
+    <p class="text-xl text-gray-300 mb-8">Довірте свій автомобіль професіоналам. Сучасне обладнання, оригінальні запчастини та досвідчені фахівці гарантують найкращий результат.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#contact-form" class="bg-primary text-dark font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition">
+        Замовити ремонт
+      </a>
+      <a href="tel:+380989256116" class="bg-transparent border-2 border-primary text-primary font-bold px-8 py-4 rounded-lg hover:bg-primary hover:text-dark transition">
+        Зателефонувати нам
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-[#111] py-10 text-center text-gray-400 text-sm">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8 text-left mb-8">
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">DIESEL & TURBO</h3>
+        <p>Професійний ремонт дизельних систем в Одесі. ПНВТ, форсунки, турбіни – швидко та якісно!</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Контакти</h3>
+        <p>Адреса: м. Одеса, вул. Дизельна, 10</p>
+        <p>Телефон: +38 (098) 925-61-16</p>
+        <p>Email: info@dieselandturbo.com.ua</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Графік роботи</h3>
+        <p>Пн-Пт: 9:00 - 18:00</p>
+        <p>Сб: 9:00 - 15:00</p>
+        <p>Нд: Вихідний</p>
+      </div>
+    </div>
+    <hr class="border-gray-800 mb-6">
+    <p>&copy; 2025 DIESEL & TURBO | Всі права захищені</p>
+    <p class="mt-2">
+      <a href="/privacy-policy" class="hover:text-primary transition">Політика конфіденційності</a>
+      |
+      <a href="/terms" class="hover:text-primary transition">Умови користування</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Кнопка "Вверх" -->
+<button id="scrollTop" class="fixed bottom-6 right-6 hidden bg-primary text-dark font-bold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-300 transition z-50" aria-label="Прокрутити вгору">
+  ↑
+</button>
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileServicesBtn = document.getElementById('mobile-services-btn');
+  const mobileServicesSubmenu = document.getElementById('mobile-services-submenu');
+  const mobileServicesIcon = document.getElementById('mobile-services-icon');
+
+  // Открытие/закрытие мобильного меню
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Открытие/закрытие подменю услуг на мобильном
+  mobileServicesBtn.addEventListener('click', () => {
+    mobileServicesSubmenu.classList.toggle('hidden');
+    mobileServicesIcon.classList.toggle('rotate-180');
+  });
+
+  // Кнопка прокрутки вверх
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('hidden', window.scrollY < 400);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  // Инициализация анимаций
+  AOS.init({ 
+    duration: 800,
+    once: true,
+    easing: 'ease-in-out',
+    offset: 100
+  });
+  
+  // Закрытие мобильного меню при клике на ссылку, но не на подменю
+  document.querySelectorAll('#mobile-menu > a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+  
+  // Закрытие подменю при клике на его ссылки
+  document.querySelectorAll('#mobile-services-submenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.getAttribute('href').startsWith('#')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  });
+</script>
+</body>
+</html>

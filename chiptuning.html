@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adblue Off - Відключення AdBlue - DIESEL & TURBO | Професійний сервіс в Одесі</title>
+  <meta name="description" content="Професійне відключення AdBlue системи для вантажних та легкових автомобілів в Одесі. Усунення проблем з SCR системою, гарантія якості." />
+  <meta name="keywords" content="adblue off, відключення адблю, deox emulator, відключення SCR, emulator adblue, вимкнення AdBlue, легкові автомобілі, вантажні авто, дизель, Одеса" />
+  <meta name="author" content="DIESEL & TURBO" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adblue Off - Відключення AdBlue - DIESEL & TURBO | Професійний сервіс в Одесі" />
+  <meta property="og:description" content="Професійне відключення AdBlue системи для вантажних та легкових автомобілів. Усунення проблем з SCR системою, гарантія якості." />
+  <meta property="og:image" content="https://dieselandturbo.com.ua/adblue-off-og.jpg" />
+  <meta property="og:url" content="https://dieselandturbo.com.ua/adblue-off" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      scroll-behavior: smooth;
+    }
+    .bg-primary { background-color: #ffcc00; }
+    .text-primary { color: #ffcc00; }
+    .text-dark { color: #111111; }
+    .bg-dark { background-color: #111111; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    /* Optimize for mobile */
+    @media (max-width: 768px) {
+      .mobile-optimize {
+        font-size: 0.95rem;
+      }
+    }
+    
+    /* Improve accessibility */
+    a:focus, button:focus {
+      outline: 2px solid #ffcc00;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white scroll-smooth">
+  
+<!-- Header -->
+<header class="bg-primary text-dark shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Логотип -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center" aria-label="DIESEL & TURBO">
+      DIESEL & TURBO
+    </a>
+
+    <!-- Десктопная навигация -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <!-- Выпадающее меню услуг для десктопа -->
+      <div class="relative group">
+        <button class="hover:text-black transition flex items-center" aria-expanded="false">
+          Послуги
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg hidden group-hover:block">
+          <div class="py-1 text-dark">
+            <a href="remont-pnvt.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт ТНВД</a>
+            <a href="remont-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт форсунок</a>
+            <a href="remont-nasos-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт насос-форсунок</a>
+            <a href="remont-turbin.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт турбін</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100 transition">Chip Tuning</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-gray-100 transition font-semibold">Всі послуги</a>
+          </div>
+        </div>
+      </div>
+      <a href="#advantages" class="hover:text-black transition">Переваги</a>
+      <a href="#reviews" class="hover:text-black transition">Відгуки</a>
+      <a href="#contact" class="hover:text-black transition">Контакти</a>
+    </nav>
+
+    <!-- Кнопка -->
+    <a href="#contact" class="hidden md:inline-block bg-dark text-white font-semibold px-5 py-2 rounded hover:bg-black transition">
+      Записатись
+    </a>
+
+    <!-- Mobile menu icon -->
+    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Відкрити меню">
+      <svg class="w-8 h-8" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-4 text-sm">
+    <!-- Выпадающее меню для мобильного -->
+    <div>
+      <button id="mobile-services-btn" class="flex items-center justify-between w-full text-dark hover:text-black transition">
+        Послуги
+        <svg id="mobile-services-icon" class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="mobile-services-submenu" class="hidden mt-2 pl-4 space-y-2">
+        <a href="remont-pnvt.html" class="block text-dark hover:text-black transition py-1">Ремонт ТНВД</a>
+        <a href="remont-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт форсунок</a>
+        <a href="remont-nasos-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт насос-форсунок</a>
+        <a href="remont-turbin.html" class="block text-dark hover:text-black transition py-1">Ремонт турбін</a>
+        <a href="chiptuning.html" class="block text-dark hover:text-black transition py-1">Chip Tuning</a>
+        <a href="#services" class="block text-dark hover:text-black transition py-1 font-semibold">Всі послуги</a>
+      </div>
+    </div>
+    <a href="#advantages" class="block text-dark hover:text-black transition">Переваги</a>
+    <a href="#reviews" class="block text-dark hover:text-black transition">Відгуки</a>
+    <a href="#contact" class="block text-dark hover:text-black transition">Контакти</a>
+    <a href="#contact" class="block bg-dark text-white text-center font-semibold px-4 py-2 rounded hover:bg-black transition">Записатись</a>
+  </div>
+</header>
+
+<!-- Breadcrumbs -->
+<div class="bg-[#1a1a1a] py-2">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-sm text-gray-400">
+      <a href="index.html" class="hover:text-primary transition">Головна</a> &gt; 
+      <span class="text-primary">AdBlue Off</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-b from-[#111] to-[#1a1a1a] py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">AdBlue Off</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">Професійне відключення системи SCR/AdBlue для вантажних та легкових автомобілів</p>
+    </div>
+    
+    <!-- Головна секція з фото зліва і текстом справа -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Фото зліва -->
+      <div class="rounded-xl overflow-hidden shadow-lg" data-aos="fade-right">
+        <img src="addblue off.jpg" alt="Відключення AdBlue" class="w-full h-auto">
+      </div>
+      
+      <!-- Текст справа з кнопкою -->
+      <div data-aos="fade-left">
+        <h2 class="text-2xl font-bold text-primary mb-6">Вирішення проблем з AdBlue системою</h2>
+        
+        <div class="space-y-4 mb-8 text-gray-300">
+          <p>Система SCR (Selective Catalytic Reduction) з AdBlue часто спричиняє проблеми експлуатації автомобіля:</p>
+          
+          <ul class="list-disc pl-6 space-y-2 mt-4">
+            <li>Обмеження потужності двигуна</li>
+            <li>Збільшення витрати палива</li>
+            <li>Помилки в роботі системи SCR</li>
+            <li>Дорога заміна компонентів системи</li>
+            <li>Постійні витрати на придбання реагенту</li>
+          </ul>
+          
+          <p class="font-semibold mt-6">Ми пропонуємо професійне та безпечне відключення системи AdBlue без впливу на роботу двигуна та інші системи автомобіля.</p>
+        </div>
+        
+        <a href="tel:+380989256116" class="inline-block bg-primary text-dark font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition text-lg">
+          Зателефонувати зараз
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Послуги AdBlue Off -->
+<section class="py-16 bg-[#111] px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Вантажні автомобілі -->
+      <div class="bg-[#1a1a1a] p-8 rounded-xl border border-gray-800" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-primary mb-4">AdBlue Off для вантажних автомобілів</h3>
+        <ul class="space-y-3 text-gray-300 mb-6">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>DAF, MAN, Mercedes, Scania, Volvo, Iveco</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Програмне відключення через діагностичний роз'єм</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Установка професійного емулятора</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Видалення DTC помилок з блоку керування</span>
+          </li>
+        </ul>
+        <div class="flex justify-between items-center border-t border-gray-700 pt-4">
+          <span class="text-primary font-bold">від 5000 грн</span>
+          <span class="text-gray-400 text-sm">Час: 2-3 години</span>
+        </div>
+      </div>
+      
+      <!-- Легкові автомобілі -->
+      <div class="bg-[#1a1a1a] p-8 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-primary mb-4">AdBlue Off для легкових автомобілів</h3>
+        <ul class="space-y-3 text-gray-300 mb-6">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>BMW, Audi, Mercedes, Volkswagen, Porsche</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Програмне відключення функції AdBlue в ЕБУ</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Модифікація програмного забезпечення</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Деактивація датчиків NOx</span>
+          </li>
+        </ul>
+        <div class="flex justify-between items-center border-t border-gray-700 pt-4">
+          <span class="text-primary font-bold">від 3500 грн</span>
+          <span class="text-gray-400 text-sm">Час: 1-2 години</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Переваги -->
+<section class="py-16 bg-[#1a1a1a] px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-primary mb-10">Переваги відключення AdBlue</h2>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#111] p-6 rounded-lg text-center" data-aos="fade-up">
+        <div class="text-primary text-4xl mb-4 flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-primary">Економія коштів</h3>
+        <p class="text-gray-300 mt-2">Відсутність витрат на придбання AdBlue та ремонт SCR системи</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-primary text-4xl mb-4 flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-primary">Відновлення потужності</h3>
+        <p class="text-gray-300 mt-2">Усунення обмеження потужності двигуна, покращення динаміки</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-primary text-4xl mb-4 flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-primary">Надійність</h3>
+        <p class="text-gray-300 mt-2">Уникнення аварійних режимів і попереджувальних повідомлень</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Форма заявки -->
+<section id="contact-form" class="py-16 bg-dark px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-primary mb-8">Замовити відключення AdBlue</h2>
+    
+    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg" data-aos="fade-up">
+      <form id="adblueForm" class="space-y-4" action="submit.php" method="POST">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-1">Ім'я</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+          </div>
+          <div>
+            <label for="phone" class="block text-left text-sm font-medium text-gray-300 mb-1">Телефон</label>
+            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+          </div>
+        </div>
+        
+        <div>
+          <label for="car_type" class="block text-left text-sm font-medium text-gray-300 mb-1">Тип автомобіля</label>
+          <select id="car_type" name="car_type" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+            <option value="">Виберіть тип автомобіля</option>
+            <option value="Вантажний">Вантажний</option>
+            <option value="Легковий">Легковий</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="car" class="block text-left text-sm font-medium text-gray-300 mb-1">Марка та модель</label>
+          <input type="text" id="car" name="car" placeholder="Наприклад: Mercedes Actros, BMW X5" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+        </div>
+        
+        <button type="submit" class="w-full bg-primary text-dark font-bold px-6 py-3 rounded hover:bg-yellow-400 transition">
+          Надіслати заявку
+        </button>
+      </form>
+    </div>
+    
+    <div class="mt-8 text-center">
+      <p class="text-gray-400">Або зателефонуйте нам:</p>
+      <a href="tel:+380989256116" class="text-2xl font-bold text-primary hover:text-yellow-300 transition">+38 (098) 925-61-16</a>
+    </div>
+  </div>
+</section>
+
+<!-- Нижня частина -->
+<footer class="bg-[#111] py-10 text-center text-gray-400 text-sm">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8 text-left mb-8">
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">DIESEL & TURBO</h3>
+        <p>Професійний ремонт дизельних систем в Одесі. ПНВТ, форсунки, турбіни – швидко та якісно!</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Контакти</h3>
+        <p>Адреса: м. Одеса, вул. Дизельна, 10</p>
+        <p>Телефон: +38 (098) 925-61-16</p>
+        <p>Email: info@dieselandturbo.com.ua</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Графік роботи</h3>
+        <p>Пн-Пт: 9:00 - 18:00</p>
+        <p>Сб: 9:00 - 15:00</p>
+        <p>Нд: Вихідний</p>
+      </div>
+    </div>
+    <hr class="border-gray-800 mb-6">
+    <p>&copy; 2025 DIESEL & TURBO | Всі права захищені</p>
+    <p class="mt-2">
+      <a href="/privacy-policy" class="hover:text-primary transition">Політика конфіденційності</a>
+      |
+      <a href="/terms" class="hover:text-primary transition">Умови користування</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Кнопка "Вверх" -->
+<button id="scrollTop" class="fixed bottom-6 right-6 hidden bg-primary text-dark font-bold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-300 transition z-50" aria-label="Прокрутити вгору">
+  ↑
+</button>
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+ const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileServicesBtn = document.getElementById('mobile-services-btn');
+  const mobileServicesSubmenu = document.getElementById('mobile-services-submenu');
+  const mobileServicesIcon = document.getElementById('mobile-services-icon');
+
+  // Открытие/закрытие мобильного меню
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Открытие/закрытие подменю услуг на мобильном
+  mobileServicesBtn.addEventListener('click', () => {
+    mobileServicesSubmenu.classList.toggle('hidden');
+    mobileServicesIcon.classList.toggle('rotate-180');
+  });
+
+  // Кнопка прокрутки вверх
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('hidden', window.scrollY < 400);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  // Инициализация анимаций
+  AOS.init({ 
+    duration: 800,
+    once: true,
+    easing: 'ease-in-out',
+    offset: 100
+  });
+  
+  // Закрытие мобильного меню при клике на ссылку, но не на подменю
+  document.querySelectorAll('#mobile-menu > a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+  
+  // Закрытие подменю при клике на его ссылки
+  document.querySelectorAll('#mobile-services-submenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.getAttribute('href').startsWith('#')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  });
+</script>
+</body>
+</html>

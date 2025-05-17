@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ремонт насос-форсунок - DIESEL & TURBO | Професійний ремонт в Одесі</title>
+  <meta name="description" content="Професійний ремонт насос-форсунок в Одесі. Діагностика на стенді, ремонт насос-форсунок Volkswagen, Audi, Volvo, Scania. Гарантія якості." />
+  <meta name="keywords" content="ремонт насос-форсунок, насос-форсунки, UIS, UI, PDE, PD, Volkswagen насос-форсунки, Audi насос-форсунки, Volvo насос-форсунки, Scania насос-форсунки, дизель, Одеса" />
+  <meta name="author" content="DIESEL & TURBO" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ремонт форсунок Common Rail - DIESEL & TURBO | Професійний ремонт в Одесі" />
+  <meta property="og:description" content="Діагностика і ремонт дизельних форсунок Common Rail в Одесі. Працюємо з форсунками BOSCH, DENSO, SIEMENS, DELPHI. Гарантія якості." />
+  <meta property="og:image" content="https://dieselandturbo.com.ua/forsunki-repair-og.jpg" />
+  <meta property="og:url" content="https://dieselandturbo.com.ua/remont-forsunok" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      scroll-behavior: smooth;
+    }
+    .bg-primary { background-color: #ffcc00; }
+    .text-primary { color: #ffcc00; }
+    .text-dark { color: #111111; }
+    .bg-dark { background-color: #111111; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    /* Optimize for mobile */
+    @media (max-width: 768px) {
+      .mobile-optimize {
+        font-size: 0.95rem;
+      }
+    }
+    
+    /* Improve accessibility */
+    a:focus, button:focus {
+      outline: 2px solid #ffcc00;
+      outline-offset: 2px;
+    }
+    
+    /* Optimize image display */
+    .service-image {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    
+    .forsunka-card {
+      transition: all 0.3s ease;
+    }
+    
+    .forsunka-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(255, 204, 0, 0.1), 0 10px 10px -5px rgba(255, 204, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-dark text-white scroll-smooth">
+  
+<!-- Header -->
+<header class="bg-primary text-dark shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Логотип -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center" aria-label="DIESEL & TURBO">
+      DIESEL & TURBO
+    </a>
+
+    <!-- Десктопная навигация -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <!-- Выпадающее меню услуг для десктопа -->
+      <div class="relative group">
+        <button class="hover:text-black transition flex items-center" aria-expanded="false">
+          Послуги
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg hidden group-hover:block">
+          <div class="py-1 text-dark">
+            <a href="remont-pnvt.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт ТНВД</a>
+            <a href="remont-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт форсунок</a>
+            <a href="remont-nasos-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт насос-форсунок</a>
+            <a href="remont-turbin.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт турбін</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100 transition">Chip Tuning</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-gray-100 transition font-semibold">Всі послуги</a>
+          </div>
+        </div>
+      </div>
+      <a href="#advantages" class="hover:text-black transition">Переваги</a>
+      <a href="#reviews" class="hover:text-black transition">Відгуки</a>
+      <a href="#contact" class="hover:text-black transition">Контакти</a>
+    </nav>
+
+    <!-- Кнопка -->
+    <a href="#contact" class="hidden md:inline-block bg-dark text-white font-semibold px-5 py-2 rounded hover:bg-black transition">
+      Записатись
+    </a>
+
+    <!-- Mobile menu icon -->
+    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Відкрити меню">
+      <svg class="w-8 h-8" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-4 text-sm">
+    <!-- Выпадающее меню для мобильного -->
+    <div>
+      <button id="mobile-services-btn" class="flex items-center justify-between w-full text-dark hover:text-black transition">
+        Послуги
+        <svg id="mobile-services-icon" class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="mobile-services-submenu" class="hidden mt-2 pl-4 space-y-2">
+        <a href="remont-pnvt.html" class="block text-dark hover:text-black transition py-1">Ремонт ТНВД</a>
+        <a href="remont-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт форсунок</a>
+        <a href="remont-nasos-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт насос-форсунок</a>
+        <a href="remont-turbin.html" class="block text-dark hover:text-black transition py-1">Ремонт турбін</a>
+        <a href="chiptuning.html" class="block text-dark hover:text-black transition py-1">Chip Tuning</a>
+        <a href="#services" class="block text-dark hover:text-black transition py-1 font-semibold">Всі послуги</a>
+      </div>
+    </div>
+    <a href="#advantages" class="block text-dark hover:text-black transition">Переваги</a>
+    <a href="#reviews" class="block text-dark hover:text-black transition">Відгуки</a>
+    <a href="#contact" class="block text-dark hover:text-black transition">Контакти</a>
+    <a href="#contact" class="block bg-dark text-white text-center font-semibold px-4 py-2 rounded hover:bg-black transition">Записатись</a>
+  </div>
+</header>
+
+<!-- Breadcrumbs -->
+<div class="bg-[#1a1a1a] py-2">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-sm text-gray-400">
+      <a href="index.html" class="hover:text-primary transition">Головна</a> &gt; 
+      <span class="text-primary">Ремонт форсунок</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section class="bg-gradient-to-b from-[#111] to-[#1a1a1a] py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Ремонт насос-форсунок</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">Професійний ремонт та відновлення насос-форсунок для автомобілів Volkswagen, Audi, Volvo, та інших. Використовуємо сертифіковане обладнання та оригінальні запчастини для забезпечення найвищої якості.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Діагностика насос-форсунок -->
+  <div class="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-lg forsunka-card border border-gray-800" data-aos="fade-up">
+    <div class="relative">
+      <img src="diagnostika-forsunok.png" alt="Діагностика насос-форсунок" class="w-full h-66 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <a href="#contact-form" class="bg-primary text-dark px-4 py-2 rounded-lg font-medium hover:bg-yellow-400 transition">Замовити</a>
+      </div>
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-primary mb-3">Діагностика насос-форсунок</h3>
+      <p class="text-gray-300 mb-4">Повна перевірка насос-форсунок на професійному стенді з визначенням параметрів впорскування та виявленням несправностей.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-primary font-bold">від 800 грн</span>
+        <span class="text-gray-400 text-sm">Час: 2-4 год</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ремонт насос-форсунок Volkswagen/Audi -->
+  <div class="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-lg forsunka-card border border-gray-800" data-aos="fade-up" data-aos-delay="100">
+    <div class="relative">
+      <img src="nasos-fors-bosh.png" alt="Ремонт насос-форсунок Volkswagen/Audi" class="w-full h-66 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <a href="#contact-form" class="bg-primary text-dark px-4 py-2 rounded-lg font-medium hover:bg-yellow-400 transition">Замовити</a>
+      </div>
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-primary mb-3">Ремонт насос-форсунок Bosch 1 покоління та Bosh 400 cерії</h3>
+      <p class="text-gray-300 mb-4">Відновлення насос-форсунок PD/PDE для двигунів 1.9 TDI, 2.0 TDI, 2.5 TDI групи VAG. Заміна всіх зношених деталей.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-primary font-bold">від 2200 грн</span>
+        <span class="text-gray-400 text-sm">Час: 2-3 дні</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ремонт насос-форсунок Volvo/Scania -->
+  <div class="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-lg forsunka-card border border-gray-800" data-aos="fade-up" data-aos-delay="200">
+    <div class="relative">
+      <img src="siemens-fors.png" alt="Ремонт насос-форсунок Volvo/Scania" class="w-full h-66 object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <a href="#contact-form" class="bg-primary text-dark px-4 py-2 rounded-lg font-medium hover:bg-yellow-400 transition">Замовити</a>
+      </div>
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-primary mb-3">Ремонт насос-форсунки Siemens</h3>
+      <p class="text-gray-300 mb-4">Професійне відновлення насос-форсунок Siemens з заміною плунжерної пари та ремкомплектів.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-primary font-bold">від 3500 грн</span>
+        <span class="text-gray-400 text-sm">Час: 3-5 днів</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- Процес ремонту -->
+<section class="py-20 bg-[#111] px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-16">Процес ремонту насос-форсунок</h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex flex-col items-center text-center" data-aos="fade-up">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">1</div>
+        <h3 class="text-xl font-semibold mb-3">Діагностика</h3>
+        <p class="text-gray-300">Перевірка насос-форсунок на спеціалізованому стенді з тестуванням режимів роботи, вимірюванням витрати та тиску впорскування.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">2</div>
+        <h3 class="text-xl font-semibold mb-3">Розбирання та чистка</h3>
+        <p class="text-gray-300">Повне розбирання насос-форсунки, ультразвукова чистка всіх компонентів та видалення відкладень з каналів.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">3</div>
+        <h3 class="text-xl font-semibold mb-3">Заміна деталей</h3>
+        <p class="text-gray-300">Заміна плунжерної пари, клапанів, форсуночної частини, ущільнень та інших зношених компонентів на нові.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-2xl font-bold text-dark mb-4">4</div>
+        <h3 class="text-xl font-semibold mb-3">Калібрування і тестування</h3>
+        <p class="text-gray-300">Комп'ютерне калібрування насос-форсунок під оригінальні параметри, перевірка роботи на всіх режимах та видача діагностичної карти.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Типові несправності -->
+<section class="py-20 bg-[#1a1a1a] px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Типові несправності насос-форсунок</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-[#111] p-6 rounded-lg border border-gray-800" data-aos="fade-right">
+        <h3 class="text-xl font-bold text-primary mb-4">Механічні несправності</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Знос плунжерної пари та втрата компресії</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Пошкодження або зависання клапанів</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Знос розпилювача та закоксування сопел</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Протікання ущільнень високого тиску</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Зношеність кулачкового приводу</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg border border-gray-800" data-aos="fade-left">
+        <h3 class="text-xl font-bold text-primary mb-4">Електронні несправності</h3>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Пошкодження соленоїдного клапана</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Обрив електричної обмотки</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Порушення роботи датчика тиску</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Замикання контактів роз'єму</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-primary mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Порушення параметрів електричного сигналу</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="mt-12 text-center" data-aos="fade-up">
+      <a href="#contact-form" class="inline-block bg-primary text-dark font-bold px-8 py-3 rounded-lg hover:bg-yellow-400 transition">
+        Діагностувати мої насос-форсунки
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Відгуки -->
+<section class="py-20 bg-[#1a1a1a] px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Відгуки про ремонт форсунок</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#111] p-6 rounded-xl shadow-md" data-aos="fade-up">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Відремонтували форсунки на моєму Mercedes. Авто перестало димити і знову їде як треба. Ціна значно нижча ніж нові форсунки."</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Сергій, Mercedes-Benz E220</p>
+      </div>
+      <div class="bg-[#111] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Дуже задоволений роботою майстрів. Швидко і якісно відновили п'єзофорсунки, надали повний звіт про виконані роботи. Рекомендую!"</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Андрій, BMW X5</p>
+      </div>
+      <div class="bg-[#111] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Спасибі за відновлення форсунок Delphi на моєму Renault. Все зробили швидко, надали гарантію. Витрата пального знизилась, двигун працює тихіше."</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Ірина, Renault Megane</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Форма заявки -->
+<section id="contact-form" class="py-20 bg-dark px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-10">Замовити ремонт форсунок</h2>
+    
+    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg" data-aos="fade-up">
+      <form id="injectorForm" class="space-y-4" action="submit.php" method="POST">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-1">Ім'я</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+          </div>
+          <div>
+            <label for="phone" class="block text-left text-sm font-medium text-gray-300 mb-1">Телефон</label>
+            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+          </div>
+        </div>
+        
+        <div>
+    <label for="injector_type" class="block text-left text-sm font-medium text-gray-300 mb-1">Тип насос-форсунок</label>
+    <select id="injector_type" name="injector_type" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+        <option value="">Виберіть тип насос-форсунок</option>
+        <option value="Volkswagen/Audi PD">Volkswagen/Audi PD</option>
+        <option value="Volkswagen/Audi PDE">Volkswagen/Audi PDE</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Інший">Інший</option>
+    </select>
+    </div>
+        
+        <div>
+          <label for="car" class="block text-left text-sm font-medium text-gray-300 mb-1">Автомобіль</label>
+          <input type="text" id="car" name="car" placeholder="Марка, модель, рік випуску" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+        </div>
+        
+        <div>
+          <label for="message" class="block text-left text-sm font-medium text-gray-300 mb-1">Опишіть проблему</label>
+          <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none"></textarea>
+        </div>
+        
+        <button type="submit" class="w-full bg-primary text-dark font-bold px-6 py-3 rounded hover:bg-yellow-400 transition">
+          Надіслати заявку
+        </button>
+      </form>
+    </div>
+    
+    <div class="mt-10 text-center">
+      <p class="text-gray-400">Або зателефонуйте нам:</p>
+      <a href="tel:+380989256116" class="text-2xl font-bold text-primary hover:text-yellow-300 transition">+38 (098) 925-61-16</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 bg-[#1a1a1a] px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Відповіді на питання</h2>
+    
+    <div class="space-y-6">
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up">
+        <h3 class="text-xl font-bold text-primary mb-3">Як зрозуміти, що насос-форсунки потребують ремонту?</h3>
+        <p class="text-gray-300">Основні ознаки несправності: тяжкий запуск двигуна, підвищена витрата палива, чорний дим з вихлопної труби, стукіт або шум двигуна, зниження потужності, нерівномірна робота двигуна, індикація Check Engine.</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="50">
+        <h3 class="text-xl font-bold text-primary mb-3">Скільки часу займає ремонт насос-форсунок?</h3>
+        <p class="text-gray-300">Термін ремонту залежить від типу насос-форсунок та складності несправності. Діагностика займає 2-4 години, а повний ремонт — від 2 до 5 днів для вантажних автомобілів. Для легкових VAG зазвичай 2-3 дні.</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold text-primary mb-3">Чи даєте ви гарантію на відремонтовані насос-форсунки?</h3>
+        <p class="text-gray-300">Так, ми надаємо гарантію від 6 до 12 місяців на всі види ремонту насос-форсунок. Гарантія поширюється на всі компоненти, що були замінені або відремонтовані нашими фахівцями.</p>
+      </div>
+      
+      <div class="bg-[#111] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="text-xl font-bold text-primary mb-3">Чим насос-форсунки відрізняються від звичайних форсунок Common Rail?</h3>
+        <p class="text-gray-300">Насос-форсунка — це комбінований пристрій, що поєднує функції паливного насоса високого тиску та форсунки в одному корпусі. В системах Common Rail ці компоненти розділені. Насос-форсунки встановлюються безпосередньо на головку блоку циліндрів і приводяться в дію від розподільчого вала.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Переваги сервісу -->
+<section class="py-20 bg-dark px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Чому обирають нас</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#1a1a1a] p-6 rounded-xl" data-aos="fade-up">
+        <div class="text-primary text-4xl mb-4">
+          <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-2">Сучасне обладнання</h3>
+        <p class="text-gray-300">Використовуємо професійне діагностичне та ремонтне обладнання від провідних виробників для максимальної точності.</p>
+      </div>
+      
+      <div class="bg-[#1a1a1a] p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-primary text-4xl mb-4">
+          <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-2">Досвідчені фахівці</h3>
+        <p class="text-gray-300">Наші механіки мають багаторічний стаж роботи з дизельними системами та постійно підвищують свою кваліфікацію.</p>
+      </div>
+      
+      <div class="bg-[#1a1a1a] p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-primary text-4xl mb-4">
+          <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary mb-2">Оригінальні запчастини</h3>
+        <p class="text-gray-300">Використовуємо тільки якісні комплектуючі від виробників або сертифіковані аналоги з гарантією.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-[#111] px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Ремонт насос-форсунок з гарантією</h2>
+    <p class="text-xl text-gray-300 mb-8">Довірте свій автомобіль професіоналам. Сучасне обладнання, оригінальні запчастини та досвідчені фахівці гарантують найкращий результат.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#contact-form" class="bg-primary text-dark font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition">
+        Замовити ремонт
+      </a>
+      <a href="tel:+380989256116" class="bg-transparent border-2 border-primary text-primary font-bold px-8 py-4 rounded-lg hover:bg-primary hover:text-dark transition">
+        Зателефонувати нам
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-[#111] py-10 text-center text-gray-400 text-sm">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8 text-left mb-8">
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">DIESEL & TURBO</h3>
+        <p>Професійний ремонт дизельних систем в Одесі. ПНВТ, форсунки, турбіни – швидко та якісно!</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Контакти</h3>
+        <p>Адреса: м. Одеса, вул. Дизельна, 10</p>
+        <p>Телефон: +38 (098) 925-61-16</p>
+        <p>Email: info@dieselandturbo.com.ua</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Графік роботи</h3>
+        <p>Пн-Пт: 9:00 - 18:00</p>
+        <p>Сб: 9:00 - 15:00</p>
+        <p>Нд: Вихідний</p>
+      </div>
+    </div>
+    <hr class="border-gray-800 mb-6">
+    <p>&copy; 2025 DIESEL & TURBO | Всі права захищені</p>
+    <p class="mt-2">
+      <a href="/privacy-policy" class="hover:text-primary transition">Політика конфіденційності</a>
+      |
+      <a href="/terms" class="hover:text-primary transition">Умови користування</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Кнопка "Вверх" -->
+<button id="scrollTop" class="fixed bottom-6 right-6 hidden bg-primary text-dark font-bold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-300 transition z-50" aria-label="Прокрутити вгору">
+  ↑
+</button>
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+ // Мобильное меню - обновленная версия
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileServicesBtn = document.getElementById('mobile-services-btn');
+  const mobileServicesSubmenu = document.getElementById('mobile-services-submenu');
+  const mobileServicesIcon = document.getElementById('mobile-services-icon');
+
+  // Открытие/закрытие мобильного меню
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Открытие/закрытие подменю услуг на мобильном
+  mobileServicesBtn.addEventListener('click', () => {
+    mobileServicesSubmenu.classList.toggle('hidden');
+    mobileServicesIcon.classList.toggle('rotate-180');
+  });
+
+  // Кнопка прокрутки вверх
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('hidden', window.scrollY < 400);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  // Инициализация анимаций
+  AOS.init({ 
+    duration: 800,
+    once: true,
+    easing: 'ease-in-out',
+    offset: 100
+  });
+  
+  // Закрытие мобильного меню при клике на ссылку, но не на подменю
+  document.querySelectorAll('#mobile-menu > a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+  
+  // Закрытие подменю при клике на его ссылки
+  document.querySelectorAll('#mobile-services-submenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.getAttribute('href').startsWith('#')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  });
+</script>
+</body>
+</html>

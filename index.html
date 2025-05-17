@@ -3,15 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DIESEL & TURBO – Дизель сервіс</title>
-  <meta name="description" content="Ремонт ТНВД, форсунок, турбін. Програмування (Chip Tuning). Дизель сервіс DIESEL & TURBO – професіонали своєї справи в Одесі." />
-  <meta name="keywords" content="ремонт ТНВД, ремонт форсунок, ремонт турбін, дизель сервіс, чіп тюнінг, Одеса" />
+  <title>DIESEL & TURBO - Професійний ремонт дизельних систем в Одесі | ТНВД, форсунки, турбіни</title>
+  <meta name="description" content="Професійний ремонт ТНВД, форсунок, турбін та програмування (Chip Tuning) в Одесі. Дизель сервіс DIESEL & TURBO - експерти з ремонту дизельних систем." />
+  <meta name="keywords" content="ремонт ТНВД, ремонт форсунок, ремонт турбін, дизель сервіс, чіп тюнінг, Одеса, насос-форсунки, common rail, chip tuning" />
+  <meta name="author" content="DIESEL & TURBO" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Ukrainian" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DIESEL & TURBO – Професійний дизель сервіс в Одесі" />
+  <meta property="og:description" content="Ремонт ТНВД, форсунок, турбін, чіп тюнінг. Професійне обладнання, гарантія якості. Одеса." />
+  <meta property="og:image" content="https://dieselandturbo.com.ua/og-image.jpg" />
+  <meta property="og:url" content="https://dieselandturbo.com.ua" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DIESEL & TURBO – Професійний дизель сервіс в Одесі" />
+  <meta name="twitter:description" content="Ремонт ТНВД, форсунок, турбін, чіп тюнінг. Професійне обладнання, гарантія якості. Одеса." />
+  <meta name="twitter:image" content="https://dieselandturbo.com.ua/og-image.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="banner.png" as="image" />
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" />
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <style>
-    body { font-family: 'Segoe UI', sans-serif; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      scroll-behavior: smooth;
+    }
     .bg-primary { background-color: #ffcc00; }
+    .text-primary { color: #ffcc00; }
     .text-dark { color: #111111; }
     .bg-dark { background-color: #111111; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    /* Optimize for mobile */
+    @media (max-width: 768px) {
+      .mobile-optimize {
+        font-size: 0.95rem;
+      }
+    }
+    
+    /* Improve accessibility */
+    a:focus, button:focus {
+      outline: 2px solid #ffcc00;
+      outline-offset: 2px;
+    }
+    
+    /* Optimize image display */
+    .service-image {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body class="bg-dark text-white scroll-smooth">
@@ -20,11 +85,33 @@
 <header class="bg-primary text-dark shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Логотип -->
-    <a href="#" class="text-2xl font-bold tracking-wide">DIESEL & TURBO</a>
+    <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center" aria-label="DIESEL & TURBO">
+      DIESEL & TURBO
+    </a>
 
-    <!-- Навігація -->
+    <!-- Десктопная навигация -->
     <nav class="hidden md:flex space-x-8 text-sm font-medium">
-      <a href="#services" class="hover:text-black transition">Послуги</a>
+      <!-- Выпадающее меню услуг для десктопа -->
+      <div class="relative group">
+        <button class="hover:text-black transition flex items-center" aria-expanded="false">
+          Послуги
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg hidden group-hover:block">
+          <div class="py-1 text-dark">
+            <a href="remont-pnvt.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт ТНВД</a>
+            <a href="remont-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт форсунок</a>
+            <a href="remont-nasos-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт насос-форсунок</a>
+            <a href="remont-turbin.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт турбін</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100 transition">Chip Tuning</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-gray-100 transition font-semibold">Всі послуги</a>
+          </div>
+        </div>
+      </div>
+      <a href="#advantages" class="hover:text-black transition">Переваги</a>
+      <a href="#reviews" class="hover:text-black transition">Відгуки</a>
       <a href="#contact" class="hover:text-black transition">Контакти</a>
     </nav>
 
@@ -33,91 +120,392 @@
       Записатись
     </a>
 
-        <!-- Mobile menu icon -->
-    <button id="menu-btn" class="md:hidden focus:outline-none">
-    <svg class="w-8 h-8" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
+    <!-- Mobile menu icon -->
+    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Відкрити меню">
+      <svg class="w-8 h-8" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
+      </svg>
     </button>
-
   </div>
 
   <!-- Mobile menu -->
   <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-4 text-sm">
-    <a href="#services" class="block text-dark hover:text-black transition">Послуги</a>
+    <!-- Выпадающее меню для мобильного -->
+    <div>
+      <button id="mobile-services-btn" class="flex items-center justify-between w-full text-dark hover:text-black transition">
+        Послуги
+        <svg id="mobile-services-icon" class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="mobile-services-submenu" class="hidden mt-2 pl-4 space-y-2">
+        <a href="remont-pnvt.html" class="block text-dark hover:text-black transition py-1">Ремонт ТНВД</a>
+        <a href="remont-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт форсунок</a>
+        <a href="remont-nasos-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт насос-форсунок</a>
+        <a href="remont-turbin.html" class="block text-dark hover:text-black transition py-1">Ремонт турбін</a>
+        <a href="chiptuning.html" class="block text-dark hover:text-black transition py-1">Chip Tuning</a>
+        <a href="#services" class="block text-dark hover:text-black transition py-1 font-semibold">Всі послуги</a>
+      </div>
+    </div>
+    <a href="#advantages" class="block text-dark hover:text-black transition">Переваги</a>
+    <a href="#reviews" class="block text-dark hover:text-black transition">Відгуки</a>
     <a href="#contact" class="block text-dark hover:text-black transition">Контакти</a>
     <a href="#contact" class="block bg-dark text-white text-center font-semibold px-4 py-2 rounded hover:bg-black transition">Записатись</a>
   </div>
 </header>
 
-
-  <!-- Hero Section -->
-  <section class="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto py-20 px-6 gap-10">
-    <!-- Text -->
-    <div class="lg:w-1/2 space-y-6">
-      <h1 class="text-5xl font-bold text-primary">DIESEL <br>&<br> TURBO</h1>
-      <p class="text-xl text-gray-200">Професійний ремонт дизельних систем в Одесі.<br> ТНВД, форсунки, турбіни – швидко та якісно!</p>
+<!-- Hero Section -->
+<section class="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto py-20 px-6 gap-10">
+  <!-- Text -->
+  <div class="lg:w-1/2 space-y-6" data-aos="fade-right">
+    <h1 class="text-5xl font-bold text-primary">DIESEL <br>&<br> TURBO</h1>
+    <p class="text-xl text-gray-200">Професійний ремонт дизельних систем в Одесі.<br> ТНВД, форсунки, турбіни – швидко та якісно!</p>
+    <div class="flex flex-wrap gap-4">
       <a href="#contact" class="inline-block bg-primary text-dark font-semibold px-6 py-3 rounded hover:bg-yellow-400 transition">
-        Записатись
+        Записатись на діагностику
+      </a>
+      <a href="tel:+380989256116" class="inline-flex items-center text-primary border border-primary px-6 py-3 rounded hover:bg-primary hover:text-dark transition">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+        </svg>
+        Подзвонити
       </a>
     </div>
-    <!-- Image -->
-    <div class="lg:w-1/2">
-      <img src="banner.png" alt="Дизельні запчастини" class="rounded-lg shadow-xl max-w-full max-h-[800px]" />
-    </div>
-  </section>
+  </div>
+  
+  <!-- Image -->
+  <div class="lg:w-1/2" data-aos="fade-left">
+    <img src="banner.png" alt="Професійний ремонт дизельних систем" class="rounded-lg shadow-xl max-w-full max-h-[800px]" width="600" height="400" loading="eager" />
+  </div>
+</section>
 
 <!-- Services Section with divider -->
 <section id="services" class="relative bg-[#1a1a1a] text-white py-20">
- 
-
   <div class="relative z-10 max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-bold text-center text-primary mb-14">Наші Послуги</h2>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-  <!-- Первая строка: три карточки -->
-  <div class="bg-[#111] border border-yellow-400 rounded-2xl p-6 shadow-xl group hover:shadow-yellow-400/30 transition-all">
-    <img src="tnvd.png" alt="Ремонт ТНВД" class="rounded-lg h-49 w-full object-cover mb-4 group-hover:scale-105 transition-transform duration-500">
-    <h3 class="text-xl font-bold text-yellow-400 mb-2">Ремонт ТНВД</h3>
-    <p class="text-gray-300 text-sm">Діагностика, чистка, заміна зношених елементів паливних насосів високого тиску.</p>
-  </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <!-- Первая строка: три карточки -->
+      <div class="bg-[#111] border-2 border-yellow-400 rounded-2xl overflow-hidden shadow-xl group hover:shadow-yellow-400/30 transition-all h-full flex flex-col" data-aos="fade-up">
+        <div class="h-64 overflow-hidden">
+          <img src="bosh-vp44.png" alt="Ремонт ТНВД" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="500" height="350" loading="lazy">
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-4">Ремонт ТНВД</h3>
+          <p class="text-gray-300">Діагностика, чистка, заміна зношених елементів паливних насосів високого тиску. Працюємо з Bosch, Delphi, Denso, Siemens.</p>
+        </div>
+      </div>
 
-  <div class="bg-[#111] border border-yellow-400 rounded-2xl p-6 shadow-xl group hover:shadow-yellow-400/30 transition-all">
-    <img src="forsunki.png" alt="Ремонт форсунок" class="rounded-lg h-49 w-full object-cover mb-4 group-hover:scale-105 transition-transform duration-500">
-    <h3 class="text-xl font-bold text-yellow-400 mb-2">Ремонт форсунок</h3>
-    <p class="text-gray-300 text-sm">Професійний ремонт Common Rail, механічних і Piezo-форсунок усіх брендів.</p>
-  </div>
+      <div class="bg-[#111] border-2 border-yellow-400 rounded-2xl overflow-hidden shadow-xl group hover:shadow-yellow-400/30 transition-all h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-64 overflow-hidden">
+          <img src="forsunki-bosh.png" alt="Ремонт форсунок" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="500" height="350" loading="lazy">
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-4">Ремонт форсунок</h3>
+          <p class="text-gray-300">Професійний ремонт Common Rail, механічних і Piezo-форсунок усіх брендів. Діагностика на стенді, гарантія якості.</p>
+        </div>
+      </div>
 
-  <div class="bg-[#111] border border-yellow-400 rounded-2xl p-6 shadow-xl group hover:shadow-yellow-400/30 transition-all">
-    <img src="nasos-forsunki.png" alt="Ремонт насос-форсунок" class="rounded-lg h-49 w-full object-cover mb-4 group-hover:scale-105 transition-transform duration-500">
-    <h3 class="text-xl font-bold text-yellow-400 mb-2">Ремонт насос-форсунок</h3>
-    <p class="text-gray-300 text-sm">Комплексне обслуговування насос-форсунок для VAG, Renault, Volvo та ін.</p>
-  </div>
-</div>
+      <div class="bg-[#111] border-2 border-yellow-400 rounded-2xl overflow-hidden shadow-xl group hover:shadow-yellow-400/30 transition-all h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-64 overflow-hidden">
+          <img src="nasos-forsunki.png" alt="Ремонт насос-форсунок" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="500" height="350" loading="lazy">
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-4">Ремонт насос-форсунок</h3>
+          <p class="text-gray-300">Комплексне обслуговування насос-форсунок для VAG, Renault, Volvo та інших марок. Відновлення працездатності та діагностика.</p>
+        </div>
+      </div>
+    </div>
 
-<!-- Вторая строка: две карточки по центру -->
-<div class="flex flex-col lg:flex-row justify-center gap-10 mt-10">
-  <div class="bg-[#111] border border-yellow-400 rounded-2xl p-6 shadow-xl group hover:shadow-yellow-400/30 transition-all w-full lg:max-w-sm">
-    <img src="turbo.png" alt="Ремонт турбін" class="rounded-lg h-49 w-full object-cover mb-4 group-hover:scale-105 transition-transform duration-500">
-    <h3 class="text-xl font-bold text-yellow-400 mb-2">Ремонт турбін</h3>
-    <p class="text-gray-300 text-sm">Балансування, заміна картриджів, геометрії, актуаторів. Всі види турбін.</p>
-  </div>
+    <!-- Вторая строка: две карточки по центру -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 max-w-5xl mx-auto">
+      <div class="bg-[#111] border-2 border-yellow-400 rounded-2xl overflow-hidden shadow-xl group hover:shadow-yellow-400/30 transition-all h-full flex flex-col" data-aos="fade-up" data-aos-delay="300">
+        <div class="h-64 overflow-hidden">
+          <img src="turbo.png" alt="Ремонт турбін" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="500" height="350" loading="lazy">
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-4">Ремонт турбін</h3>
+          <p class="text-gray-300">Балансування, заміна картриджів, геометрії, актуаторів. Всі види турбін Garrett, Holset, BorgWarner, Mitsubishi.</p>
+        </div>
+      </div>
 
-  <div class="bg-[#111] border border-yellow-400 rounded-2xl p-6 shadow-xl group hover:shadow-yellow-400/30 transition-all w-full lg:max-w-sm">
-    <img src="chip.png" alt="Chip Tuning" class="rounded-lg h-49 w-full object-cover mb-4 group-hover:scale-105 transition-transform duration-500">
-    <h3 class="text-xl font-bold text-yellow-400 mb-2">Chip Tuning</h3>
-    <p class="text-gray-300 text-sm">Збільшення потужності, зменшення витрати пального, відключення DPF, EGR.</p>
-  </div>
-</div>
-
+      <div class="bg-[#111] border-2 border-yellow-400 rounded-2xl overflow-hidden shadow-xl group hover:shadow-yellow-400/30 transition-all h-full flex flex-col" data-aos="fade-up" data-aos-delay="400">
+        <div class="h-64 overflow-hidden">
+          <img src="chip.png" alt="Chip Tuning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="500" height="350" loading="lazy">
+        </div>
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-4">Chip Tuning</h3>
+          <p class="text-gray-300">Збільшення потужності, зменшення витрати пального, відключення DPF, EGR. Оптимізація програмного забезпечення двигуна.</p>
+        </div>
+      </div>
     </div>
   </div>
-<!-- 2. Добавим кнопку "Вверх" -->
-<button id="scrollTop" class="fixed bottom-6 right-6 hidden bg-primary text-dark font-bold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-300 transition">
-  ↑
-</button>
 
+  <!-- Кнопка "Вверх" -->
+  <button id="scrollTop" class="fixed bottom-6 right-6 hidden bg-primary text-dark font-bold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-300 transition z-50" aria-label="Прокрутити вгору">
+    ↑
+  </button>
+
+  <!-- ВОЛНА SVG снизу -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none" style="height: 60px;" aria-hidden="true">
+    <svg viewBox="0 0 500 60" preserveAspectRatio="none" class="w-full h-full fill-current text-dark">
+      <path d="M0,0 C150,60 350,0 500,60 L500,60 L0,60 Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Секция "Переваги" -->
+<section id="advantages" class="bg-[#111] py-20 text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl text-center font-bold text-primary mb-12">Чому обирають нас?</h2>
+    <div class="grid md:grid-cols-3 gap-10 text-center">
+      <div data-aos="zoom-in" class="p-6 border border-yellow-400 rounded-xl">
+        <div class="text-4xl mb-4 text-primary">⚙</div>
+        <h3 class="text-xl font-bold mb-2">Гарантія</h3>
+        <p class="text-gray-300">Надаємо гарантію до 12 місяців на всі виконані роботи та запчастини.</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="100" class="p-6 border border-yellow-400 rounded-xl">
+        <div class="text-4xl mb-4 text-primary">⏱️</div>
+        <h3 class="text-xl font-bold mb-2">Швидкість</h3>
+        <p class="text-gray-300">Діагностика та ремонт у максимально стислі терміни. Більшість робіт виконується протягом 1-2 днів.</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="200" class="p-6 border border-yellow-400 rounded-xl">
+        <div class="text-4xl mb-4 text-primary">🔧</div>
+        <h3 class="text-xl font-bold mb-2">Сучасне обладнання</h3>
+        <p class="text-gray-300">Працюємо тільки на сертифікованому стендовому обладнанні Bosch та Delphi останнього покоління.</p>
+      </div>
+    </div>
+    
+    <!-- Дополнительные преимущества -->
+    <div class="grid md:grid-cols-2 gap-10 text-center mt-10">
+      <div data-aos="zoom-in" data-aos-delay="300" class="p-6 border border-yellow-400 rounded-xl">
+        <div class="text-4xl mb-4 text-primary">👨‍🔧</div>
+        <h3 class="text-xl font-bold mb-2">Досвідчені спеціалісти</h3>
+        <p class="text-gray-300">Наші майстри мають більше 10 років досвіду роботи з дизельними системами та постійно підвищують кваліфікацію.</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="400" class="p-6 border border-yellow-400 rounded-xl">
+        <div class="text-4xl mb-4 text-primary">💰</div>
+        <h3 class="text-xl font-bold mb-2">Прозорі ціни</h3>
+        <p class="text-gray-300">Вартість робіт узгоджується до початку ремонту. Ніяких прихованих платежів.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Секция отзывов -->
+<section id="reviews" class="bg-[#1a1a1a] py-20 text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl text-center font-bold text-primary mb-12">Відгуки клієнтів</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-[#111] p-6 rounded-xl border border-yellow-400 shadow-md" data-aos="fade-up">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Швидко знайшли проблему у ТНВД і відремонтували за день. Машина почала їхати як нова. Рекомендую всім!"</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Андрій, Одеса</p>
+      </div>
+      <div class="bg-[#111] p-6 rounded-xl border border-yellow-400 shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Професійний підхід, все пояснили та показали, ціна адекватна. Форсунки працюють ідеально, економія пального відчутна."</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Ірина, Чорноморськ</p>
+      </div>
+      <div class="bg-[#111] p-6 rounded-xl border border-yellow-400 shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-4">
+          <div class="text-yellow-400">★★★★★</div>
+          <div class="ml-2 text-sm text-gray-400">5.0</div>
+        </div>
+        <p class="text-gray-300">"Робили чіп-тюнінг — авто стало їхати набагато краще, додалося потужності і крутного моменту. Дякую за якісну роботу!"</p>
+        <p class="mt-4 text-yellow-400 font-semibold">– Максим, Южне</p>
+      </div>
+    </div>
+    
+    <!-- Call to action -->
+    <div class="text-center mt-12" data-aos="fade-up">
+      <a href="https://g.page/r/dieselandturbo/review" target="_blank" class="bg-primary text-dark px-6 py-3 rounded font-semibold hover:bg-yellow-300 transition inline-flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.169 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zm9.3 2.562a1 1 0 00-1.206.87l-.598 3.58a1 1 0 01-.528.75l-.5.25a1 1 0 00-.528.75v.227a1 1 0 00.698.95l5 1.428a1 1 0 001.196-.607l.644-1.61a1 1 0 00-.122-1c-.213-.302-.486-.55-.797-.737l-3.04-1.852a.75.75 0 00-.775 0z"></path>
+        </svg>
+        Залишити відгук
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section id="contact" class="bg-dark py-20 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Записатись на діагностику</h2>
+    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">Залиште заявку або зателефонуйте – ми зв'яжемося з вами найближчим часом та відповімо на всі запитання.</p>
+    
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <a href="tel:+380989256116" class="flex flex-col items-center bg-[#1a1a1a] p-6 rounded-xl hover:bg-[#222] transition">
+        <svg class="w-10 h-10 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        <div class="font-semibold mb-2">Зателефонувати нам</div>
+        <div class="text-primary text-xl font-bold">+380 98 925 61 16</div>
+      </a>
+      
+      <a href="https://t.me/dieselturbo_odesa" target="_blank" class="flex flex-col items-center bg-[#1a1a1a] p-6 rounded-xl hover:bg-[#222] transition">
+        <svg class="w-10 h-10 text-primary mb-3" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.25l-1.226 5.786c-.094.45-.339.731-.864.731-.528 0-.75-.257-.969-.562l-2.695-3.452-1.307 1.246c-.144.144-.265.265-.539.265-.346 0-.304-.149-.431-.525l-.863-2.85-2.248-.703c-.489-.151-.498-.489.113-.731l8.773-3.383c.431-.149.83.126.643.645z"></path>
+        </svg>
+        <div class="font-semibold mb-2">Написати в Telegram</div>
+        <div class="text-primary text-xl font-bold">@dieselturbo_odesa</div>
+      </a>
+    </div>
+    
+    <!-- Форма запису -->
+    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg max-w-2xl mx-auto" data-aos="fade-up">
+      <h3 class="text-2xl font-bold text-primary mb-6">Залишити заявку</h3>
+      <form id="contactForm" class="space-y-4" action="submit.php" method="POST">
+        <div>
+          <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-1">Ім'я</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+        </div>
+        <div>
+          <label for="phone" class="block text-left text-sm font-medium text-gray-300 mb-1">Телефон</label>
+          <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+        </div>
+        <div>
+          <label for="service" class="block text-left text-sm font-medium text-gray-300 mb-1">Послуга</label>
+          <select id="service" name="service" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none">
+            <option value="TNVD">Ремонт ТНВД</option>
+            <option value="Forsunky">Ремонт форсунок</option>
+            <option value="Nasos-forsunky">Ремонт насос-форсунок</option>
+            <option value="Turbiny">Ремонт турбін</option>
+            <option value="ChipTuning">Chip Tuning</option>
+            <option value="Other">Інше</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-left text-sm font-medium text-gray-300 mb-1">Повідомлення</label>
+          <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 rounded bg-[#2a2a2a] text-white border border-gray-600 focus:border-primary focus:outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-primary text-dark font-semibold px-6 py-3 rounded hover:bg-yellow-400 transition">
+          Надіслати заявку
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Карта Google -->
+<section class="bg-[#111] py-20 text-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Як нас знайти?</h2>
+    <p class="text-gray-300 mb-8">Ми знаходимось в Одесі за адресою: вул. Дизельна, 10. <br>Нижче ви можете побачити розташування на карті:</p>
+    <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg" data-aos="zoom-in">
+      <iframe class="w-full h-full border-0" loading="lazy" allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.595759289597!2d30.732234115585497!3d46.4774707791264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631e61db6e15f%3A0x2b0fa866f607a5a0!2z0JfQsNC_0LDQtNC40LzQtdC90LjRjyDQutC-0LvQsCAi0JzQsNC90YHRgtC40YLQtdGC0LjQvSI!5e0!3m2!1suk!2sua!4v1611234567890" title="Розташування DIESEL & TURBO на карті"></iframe>
+    </div>
+    
+    <div class="mt-10 flex flex-wrap justify-center gap-8">
+      <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md max-w-xs" data-aos="fade-up">
+        <h3 class="text-xl font-bold text-yellow-400 mb-3">Адреса</h3>
+        <p class="text-gray-300">м. Одеса, вул. Дизельна, 10</p>
+      </div>
+      <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md max-w-xs" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold text-yellow-400 mb-3">Графік роботи</h3>
+        <p class="text-gray-300">Пн-Пт: 9:00 - 18:00<br>Сб: 9:00 - 15:00<br>Нд: Вихідний</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Секция соцсетей -->
+<section class="bg-[#1a1a1a] py-16 text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-10">Наші соціальні мережі</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <a href="https://t.me/dieselturbo_odesa" target="_blank" class="bg-primary text-dark px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.25l-1.226 5.786c-.094.45-.339.731-.864.731-.528 0-.75-.257-.969-.562l-2.695-3.452-1.307 1.246c-.144.144-.265.265-.539.265-.346 0-.304-.149-.431-.525l-.863-2.85-2.248-.703c-.489-.151-.498-.489.113-.731l8.773-3.383c.431-.149.83.126.643.645z"></path>
+        </svg>
+        Telegram
+      </a>
+      <a href="https://www.tiktok.com/@dieselturbo_odesa" target="_blank" class="bg-primary text-dark px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path>
+        </svg>
+        TikTok
+      </a>
+      <a href="https://www.olx.ua/uk/obyavlenie/diesel-turbo-remont-tnvd-forsunok-turbin" target="_blank" class="bg-primary text-dark px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19.709 20.063H4.291A3.288 3.288 0 0 1 1 16.779V7.221a3.288 3.288 0 0 1 3.291-3.284H19.71A3.288 3.288 0 0 1 23 7.221v9.557a3.288 3.288 0 0 1-3.291 3.285zM8.984 7.475v9.05h2.805v-3.163c0-.544.205-.833.628-.833.41 0 .628.275.628.833v3.163h2.761v-3.71c0-1.14-.41-2.126-1.71-2.126-.833 0-1.42.373-1.71.937h-.029V7.475h-2.38zm-3.848 0H7.94v9.05H5.136v-9.05z"></path>
+        </svg>
+        OLX
+      </a>
+      <a href="https://www.instagram.com/dieselturbo_odesa" target="_blank" class="bg-primary text-dark px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+    <div class="mt-10">
+      <a href="tel:+380989256116" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 px-6 rounded-full transition">Подзвонити: +38 (098) 925-61-16</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-[#111] py-10 text-center text-gray-400 text-sm">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8 text-left mb-8">
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">DIESEL & TURBO</h3>
+        <p>Професійний ремонт дизельних систем в Одесі. ТНВД, форсунки, турбіни – швидко та якісно!</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Контакти</h3>
+        <p>Адреса: м. Одеса, вул. Дизельна, 10</p>
+        <p>Телефон: +38 (098) 925-61-16</p>
+        <p>Email: info@dieselandturbo.com.ua</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary mb-4">Графік роботи</h3>
+        <p>Пн-Пт: 9:00 - 18:00</p>
+        <p>Сб: 9:00 - 15:00</p>
+        <p>Нд: Вихідний</p>
+      </div>
+    </div>
+    <hr class="border-gray-800 mb-6">
+    <p>&copy; 2025 DIESEL & TURBO | Всі права захищені</p>
+    <p class="mt-2">
+      <a href="/privacy-policy" class="hover:text-primary transition">Політика конфіденційності</a>
+      |
+      <a href="/terms" class="hover:text-primary transition">Умови користування</a>
+    </p>
+  </div>
+</footer>
+
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileServicesBtn = document.getElementById('mobile-services-btn');
+  const mobileServicesSubmenu = document.getElementById('mobile-services-submenu');
+  const mobileServicesIcon = document.getElementById('mobile-services-icon');
+
+  // Открытие/закрытие мобильного меню
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Открытие/закрытие подменю услуг на мобильном
+  mobileServicesBtn.addEventListener('click', () => {
+    mobileServicesSubmenu.classList.toggle('hidden');
+    mobileServicesIcon.classList.toggle('rotate-180');
+  });
+
+  // Кнопка прокрутки вверх
   const scrollBtn = document.getElementById('scrollTop');
   window.addEventListener('scroll', () => {
     scrollBtn.classList.toggle('hidden', window.scrollY < 400);
@@ -125,183 +513,210 @@
   scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-</script>
-  <!-- ВОЛНА SVG снизу -->
-  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none" style="height: 60px;">
-    <svg viewBox="0 0 500 60" preserveAspectRatio="none" class="w-full h-full fill-current text-dark">
-      <path d="M0,0 C150,60 350,0 500,60 L500,60 L0,60 Z"></path>
-    </svg>
-  </div>
-</section>
-
-
-
-  <!-- Contact CTA -->
-  <section id="contact" class="bg-dark py-20 px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Записатись на діагностику</h2>
-    <p class="text-gray-300 mb-6">Залиште заявку або зателефонуйте – ми зв’яжемося з вами найближчим часом.</p>
-    <a href="tel:+380631234567" class="inline-block bg-primary text-dark font-semibold px-8 py-4 rounded hover:bg-yellow-400 transition">
-      Подзвонити: +380 98 925 61 16
-    </a>
-    
-  </section>
   
-<!-- 3. Добавим секцию "Переваги" -->
-<section class="bg-[#111] py-20 text-white">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl text-center font-bold text-primary mb-12">Чому обирають нас?</h2>
-    <div class="grid md:grid-cols-3 gap-10 text-center">
-      <div data-aos="zoom-in" class="p-6 border border-yellow-400 rounded-xl">
-        <h3 class="text-xl font-bold mb-2">⚙ Гарантія</h3>
-        <p class="text-gray-300">Ми надаємо гарантію на всі виконані роботи та запчастини.</p>
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="100" class="p-6 border border-yellow-400 rounded-xl">
-        <h3 class="text-xl font-bold mb-2">⚙ Швидкість</h3>
-        <p class="text-gray-300">Діагностика та ремонт у максимально стислі терміни.</p>
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="200" class="p-6 border border-yellow-400 rounded-xl">
-        <h3 class="text-xl font-bold mb-2">⚙ Сучасне обладнання</h3>
-        <p class="text-gray-300">Працюємо тільки на сертифікованому стендовому обладнанні Bosch та Delphi.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. Секция отзывов -->
-<section class="bg-[#1a1a1a] py-20 text-white">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl text-center font-bold text-primary mb-12">Відгуки клієнтів</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-[#111] p-6 rounded-xl border border-yellow-400 shadow-md" data-aos="fade-up">
-        <p class="text-gray-300">"Швидко знайшли проблему у ТНВД і відремонтували за день. Рекомендую!"</p>
-        <p class="mt-4 text-yellow-400 font-semibold">– Андрій, Одеса</p>
-      </div>
-      <div class="bg-[#111] p-6 rounded-xl border border-yellow-400 shadow-md" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-gray-300">"Професійний підхід, все пояснили та показали, ціна адекватна."</p>
-        <p class="mt-4 text-yellow-400 font-semibold">– Ірина, Чорноморськ</p>
-      </div>
-      <div class="bg-[#111] p-6 rounded-xl border border-yellow-400 shadow-md" data-aos="fade-up" data-aos-delay="200">
-        <p class="text-gray-300">"Робили чіп-тюнінг — авто стало їхати набагато краще. Дякую!"</p>
-        <p class="mt-4 text-yellow-400 font-semibold">– Максим, Южне</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. Карта Google -->
-<section class="bg-[#111] py-20 text-white">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Як нас знайти?</h2>
-    <p class="text-gray-300 mb-8">Ми знаходимось в Одесі. Нижче ви можете побачити розташування на карті:</p>
-    <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
-      <iframe class="w-full h-full border-0" loading="lazy" allowfullscreen
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.595759289597!2d30.732234115585497!3d46.4774707791264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631e61db6e15f%3A0x2b0fa866f607a5a0!2z0JfQsNC_0LDQtNC40LzQtdC90LjRjyDQutC-0LvQsCAi0JzQsNC90YHRgtC40YLQtdGC0LjQvSI!5e0!3m2!1suk!2sua!4v1611234567890"></iframe>
-    </div>
-  </div>
-</section>
-<!-- 6. Секция соцсетей -->
-<section class="bg-[#1a1a1a] py-16 text-white">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-10">Наші соціальні мережі</h2>
-    <div class="flex flex-wrap justify-center gap-6">
-      <a href="https://t.me/ваш_канал" target="_blank" class="bg-primary text-dark px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">Telegram</a>
-      <a href="https://www.tiktok.com/@ваш_профіль" target="_blank" class="bg-primary text-dark px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">TikTok</a>
-      <a href="https://www.olx.ua/uk/ваш_профіль" target="_blank" class="bg-primary text-dark px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">OLX</a>
-    </div>
-    <div class="mt-10">
-      <a href="tel:+380631234567" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 px-6 rounded-full transition">Подзвонити: +38 (063) 123-45-67</a>
-    </div>
-  </div>
-</section>
-<footer class="bg-[#111] py-10 text-center text-gray-400 text-sm">
-  <p>&copy; 2025 DIESEL & TURBO | Всі права захищені</p>
-  <p class="mt-2">
-    <a href="#" class="hover:text-primary transition">Політика конфіденційності</a>
-    |
-    <a href="#" class="hover:text-primary transition">Умови користування</a>
-  </p>
-</footer>
-  <script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  // Инициализация анимаций
+  AOS.init({ 
+    duration: 800,
+    once: true,
+    easing: 'ease-in-out',
+    offset: 100
+  });
+  
+  // Закрытие мобильного меню при клике на ссылку, но не на подменю
+  document.querySelectorAll('#mobile-menu > a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+  
+  // Закрытие подменю при клике на его ссылки
+  document.querySelectorAll('#mobile-services-submenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.getAttribute('href').startsWith('#')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  });
+  
+  // Обработка отправки формы
+  document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+    // Здесь может быть AJAX-обработка формы
+    // При отсутствии backend можно закомментировать или реализовать через сервисы типа FormSpree
+    const formData = new FormData(this);
+    // Пример отправки данных через fetch API
+    // fetch('submit.php', {
+    //   method: 'POST',
+    //   body: formData
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //   alert('Дякуємо за заявку! Ми зв\'яжемося з вами найближчим часом.');
+    //   this.reset();
+    // })
+    // .catch(error => {
+    //   console.error('Error:', error);
+    //   alert('Виникла помилка при відправці. Будь ласка, зателефонуйте нам.');
+    // });
+    
+    // В качестве заглушки:
+    // e.preventDefault();
+    // alert('Дякуємо за заявку! Ми зв\'яжемося з вами найближчим часом.');
+    // this.reset();
   });
 </script>
+
+<!-- Структурированные данные Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   "name": "DIESEL & TURBO",
-  "image": "https://example.com/logo.png",
-  "@id": "",
-  "url": "https://example.com",
-  "telephone": "+380631234567",
+  "image": "https://dieselandturbo.com.ua/logo.png",
+  "@id": "https://dieselandturbo.com.ua",
+  "url": "https://dieselandturbo.com.ua",
+  "telephone": "+380989256116",
+  "priceRange": "₴₴",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "вул. Прикладу, 1",
+    "streetAddress": "вул. Дизельна, 10",
     "addressLocality": "Одеса",
     "postalCode": "65000",
     "addressCountry": "UA"
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "09:00",
-    "closes": "18:00"
-  }]
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.477471,
+    "longitude": 30.732234
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:00"
+    }
+  ],
+  "sameAs": [
+    "https://t.me/dieselturbo_odesa",
+    "https://www.instagram.com/dieselturbo_odesa",
+    "https://www.tiktok.com/@dieselturbo_odesa"
+  ]
 }
 </script>
 
-<!-- Мета-теги Open Graph -->
-<meta property="og:title" content="DIESEL & TURBO – Дизель сервіс в Одесі" />
-<meta property="og:description" content="Ремонт ТНВД, форсунок, турбін, чіп тюнінг. Гарантія якості. Одеса." />
-<meta property="og:image" content="https://example.com/banner.jpg" />
-<meta property="og:url" content="https://example.com" />
-<meta name="twitter:card" content="summary_large_image" />
-
-<!-- Favicon -->
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-<!-- Кнопка чат-консультанта (псевдо-чат або WhatsApp) -->
-<div class="fixed bottom-24 right-6 z-50">
-  <a href="https://wa.me/380631234567" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition">Написати в WhatsApp</a>
-</div>
-
-<!-- Анімація прокрутки AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000 });
-</script>
-
-<!-- Увімкнення анімації появи елементів при прокрутці -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fadeIn');
-          observer.unobserve(entry.target);
+<!-- Schema для LocalBusiness (организации) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "DIESEL & TURBO",
+  "description": "Професійний ремонт дизельних систем в Одесі. ТНВД, форсунки, турбіни – швидко та якісно!",
+  "image": "https://dieselandturbo.com.ua/logo.png",
+  "telephone": "+380989256116",
+  "email": "info@dieselandturbo.com.ua",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "вул. Дизельна, 10",
+    "addressLocality": "Одеса",
+    "addressRegion": "Одеська область",
+    "postalCode": "65000",
+    "addressCountry": "UA"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "87"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Андрій"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Швидко знайшли проблему у ТНВД і відремонтували за день. Машина почала їхати як нова. Рекомендую всім!"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Послуги ремонту дизельних систем",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ремонт ТНВД"
         }
-      });
-    }, {
-      threshold: 0.1
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  });
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ремонт форсунок"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ремонт турбін"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Chip Tuning"
+        }
+      }
+    ]
+  }
+}
 </script>
 
-<!-- Стиль для анімації fadeIn -->
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+<!-- Хлебные крошки Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Головна",
+      "item": "https://dieselandturbo.com.ua/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Послуги",
+      "item": "https://dieselandturbo.com.ua/#services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Контакти",
+      "item": "https://dieselandturbo.com.ua/#contact"
+    }
+  ]
 }
-.animate-fadeIn {
-  animation: fadeIn 1s ease-out forwards;
-}
-</style>
+</script>
+
+<!-- Cache-control meta tags -->
+<meta http-equiv="Cache-Control" content="max-age=31536000" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://dieselandturbo.com.ua/" />
 
 </body>
 </html>
