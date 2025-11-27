@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /submit.php
+
+Sitemap: https://dieselandturbo.com.ua/sitemap.xml
