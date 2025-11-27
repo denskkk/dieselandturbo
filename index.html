@@ -39,7 +39,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
   
   <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
@@ -1140,40 +1139,44 @@
 
 
 <!-- Scripts -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-<script defer>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileServicesBtn = document.getElementById('mobile-services-btn');
-  const mobileServicesSubmenu = document.getElementById('mobile-services-submenu');
-  const mobileServicesIcon = document.getElementById('mobile-services-icon');
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileServicesBtn = document.getElementById('mobile-services-btn');
+    const mobileServicesSubmenu = document.getElementById('mobile-services-submenu');
+    const mobileServicesIcon = document.getElementById('mobile-services-icon');
 
-  // Открытие/закрытие мобильного меню
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+    // Открытие/закрытие мобильного меню
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
-  // Открытие/закрытие подменю услуг на мобильном
-  mobileServicesBtn.addEventListener('click', () => {
-    mobileServicesSubmenu.classList.toggle('hidden');
-    mobileServicesIcon.classList.toggle('rotate-180');
-  });
+    // Открытие/закрытие подменю услуг на мобильном
+    mobileServicesBtn.addEventListener('click', () => {
+      mobileServicesSubmenu.classList.toggle('hidden');
+      mobileServicesIcon.classList.toggle('rotate-180');
+    });
 
-  // Кнопка прокрутки вверх
-  const scrollBtn = document.getElementById('scrollTop');
-  window.addEventListener('scroll', () => {
-    scrollBtn.classList.toggle('hidden', window.scrollY < 400);
-  });
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  
-  // Инициализация анимаций
-  AOS.init({ 
-    duration: 800,
-    once: true,
-    easing: 'ease-in-out',
-    offset: 100
+    // Кнопка прокрутки вверх
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('hidden', window.scrollY < 400);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Инициализация анимаций
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ 
+        duration: 800,
+        once: true,
+        easing: 'ease-in-out',
+        offset: 100
+      });
+    }
   });
   
   // Закрытие мобильного меню при клике на ссылку, но не на подменю
