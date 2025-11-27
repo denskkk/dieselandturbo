@@ -59,6 +59,15 @@
       animation: fadeIn 1s ease-out forwards;
     }
     
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .animate-pulse-custom {
+      animation: pulse 2s infinite;
+    }
+    
     /* Optimize for mobile */
     @media (max-width: 768px) {
       .mobile-optimize {
@@ -76,6 +85,60 @@
     .service-image {
       aspect-ratio: 16/9;
       object-fit: cover;
+    }
+    
+    /* ФІКС НАВБАРУ - розділюємо меню для десктопу та мобілки */
+    .desktop-menu { display: none; }
+    @media (min-width: 768px) {
+      .desktop-menu { display: flex; }
+      .mobile-menu-btn { display: none; }
+    }
+    
+    /* Покращений dropdown */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      z-index: 1000;
+    }
+    
+    /* Стікі плаваючі кнопки */
+    /* Плаваючі CTA кнопки */
+    .floating-cta {
+      position: fixed;
+      z-index: 9999;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    
+    .floating-phone {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      animation: pulse 2s infinite;
+    }
+    
+    .floating-telegram {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9999;
+    }
+    
+    /* Мобільна адаптація плаваючих кнопок */
+    @media (max-width: 640px) {
+      .floating-phone {
+        bottom: 80px;
+        right: 15px;
+      }
+      .floating-telegram {
+        bottom: 80px;
+        left: 15px;
+      }
     }
   </style>
   <!-- Event snippet for Покупка conversion page
@@ -109,101 +172,217 @@ function gtag_report_conversion(url) {
 </head>
 <body class="bg-dark text-white scroll-smooth">
   
-<!-- Header -->
-<header class="bg-primary text-dark shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Логотип -->
-    <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center" aria-label="DIESEL & TURBO">
-      DIESEL & TURBO
-    </a>
+<!-- 🔥 СУПЕР КОНВЕРСІЙНИЙ ХЕДЕР З ВИПРАВЛЕНИМ НАВБАРОМ -->
+<header class="bg-primary text-dark shadow-2xl sticky top-0 z-[100]">
+  <!-- Верхня смуга з телефоном (тільки десктоп) -->
+  <div class="hidden md:block bg-dark text-white py-2">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm">
+      <div class="flex items-center space-x-4">
+        <span>📍 Одеса, вул. Балківська 127</span>
+        <span>⏰ Пн-Пт: 9:00-18:00, Сб: 9:00-15:00</span>
+      </div>
+      <a href="tel:+380964047707" class="flex items-center font-bold text-primary hover:text-yellow-300 transition">
+        📞 +380 96 404 77 07
+      </a>
+    </div>
+  </div>
 
-    <!-- Десктопная навигация -->
-    <nav class="hidden md:flex space-x-8 text-sm font-medium">
-      <!-- Выпадающее меню услуг для десктопа -->
-      <div class="relative group">
-        <button class="hover:text-black transition flex items-center" aria-expanded="false">
-          Послуги
-          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <div class="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg hidden group-hover:block">
-          <div class="py-1 text-dark">
-            <a href="remont-pnvt.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт ТНВД</a>
-            <a href="remont-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт форсунок</a>
-            <a href="remont-nasos-forsunok.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт насос-форсунок</a>
-            <a href="remont-turbin.html" class="block px-4 py-2 hover:bg-gray-100 transition">Ремонт турбін</a>
-            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100 transition">Chip Tuning</a>
-            <a href="#services" class="block px-4 py-2 hover:bg-gray-100 transition font-semibold">Всі послуги</a>
+  <!-- Головна навігаційна панель -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+    <div class="flex items-center justify-between">
+      <!-- Логотип -->
+      <a href="index.html" class="text-xl sm:text-2xl font-bold tracking-wide flex items-center hover:opacity-80 transition" aria-label="DIESEL & TURBO">
+        🔧 DIESEL & TURBO
+      </a>
+
+      <!-- ДЕСКТОПНЕ МЕНЮ -->
+      <nav class="desktop-menu items-center space-x-6 lg:space-x-8">
+        <!-- Dropdown Послуги -->
+        <div class="relative dropdown">
+          <button class="hover:text-black transition flex items-center font-medium group" aria-expanded="false">
+            Послуги
+            <svg class="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu left-0 mt-2 w-64 bg-white rounded-lg shadow-2xl border-2 border-primary">
+            <div class="py-2">
+              <a href="remont-pnvt.html" class="block px-4 py-3 hover:bg-primary hover:text-dark transition font-medium">🔩 Ремонт ТНВД</a>
+              <a href="remont-forsunok.html" class="block px-4 py-3 hover:bg-primary hover:text-dark transition font-medium">💉 Ремонт форсунок</a>
+              <a href="remont-nasos-forsunok.html" class="block px-4 py-3 hover:bg-primary hover:text-dark transition font-medium">⚙️ Ремонт насос-форсунок</a>
+              <a href="remont-turbin.html" class="block px-4 py-3 hover:bg-primary hover:text-dark transition font-medium">🌀 Ремонт турбін</a>
+              <a href="chiptuning.html" class="block px-4 py-3 hover:bg-primary hover:text-dark transition font-medium">⚡ Chip Tuning</a>
+              <div class="border-t border-gray-200 mt-2"></div>
+              <a href="#services" class="block px-4 py-3 hover:bg-primary hover:text-dark transition font-bold text-primary">📋 Всі послуги</a>
+            </div>
           </div>
         </div>
-      </div>
-      <a href="#advantages" class="hover:text-black transition">Переваги</a>
-      <a href="#reviews" class="hover:text-black transition">Відгуки</a>
-      <a href="#contact" class="hover:text-black transition">Контакти</a>
-    </nav>
+        <a href="#advantages" class="hover:text-black transition font-medium">Переваги</a>
+        <a href="#reviews" class="hover:text-black transition font-medium">Відгуки</a>
+        <a href="#contact" class="hover:text-black transition font-medium">Контакти</a>
+      </nav>
 
-    <!-- Кнопка -->
-    <a href="#contact" class="hidden md:inline-block bg-dark text-white font-semibold px-5 py-2 rounded hover:bg-black transition">
-      Записатись
-    </a>
-
-    <!-- Mobile menu icon -->
-    <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Відкрити меню">
-      <svg class="w-8 h-8" fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-4 text-sm">
-    <!-- Выпадающее меню для мобильного -->
-    <div>
-      <button id="mobile-services-btn" class="flex items-center justify-between w-full text-dark hover:text-black transition">
-        Послуги
-        <svg id="mobile-services-icon" class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <div id="mobile-services-submenu" class="hidden mt-2 pl-4 space-y-2">
-        <a href="remont-pnvt.html" class="block text-dark hover:text-black transition py-1">Ремонт ТНВД</a>
-        <a href="remont-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт форсунок</a>
-        <a href="remont-nasos-forsunok.html" class="block text-dark hover:text-black transition py-1">Ремонт насос-форсунок</a>
-        <a href="remont-turbin.html" class="block text-dark hover:text-black transition py-1">Ремонт турбін</a>
-        <a href="chiptuning.html" class="block text-dark hover:text-black transition py-1">Chip Tuning</a>
-        <a href="#services" class="block text-dark hover:text-black transition py-1 font-semibold">Всі послуги</a>
-      </div>
-    </div>
-    <a href="#advantages" class="block text-dark hover:text-black transition">Переваги</a>
-    <a href="#reviews" class="block text-dark hover:text-black transition">Відгуки</a>
-    <a href="#contact" class="block text-dark hover:text-black transition">Контакти</a>
-    <a href="#contact" class="block bg-dark text-white text-center font-semibold px-4 py-2 rounded hover:bg-black transition">Записатись</a>
-  </div>
-</header>
-
-<!-- Hero Section -->
-<section class="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto py-20 px-6 gap-10">
-  <!-- Text -->
-  <div class="lg:w-1/2 space-y-6" data-aos="fade-right">
-    <h1 class="text-5xl font-bold text-primary">DIESEL <br>&<br> TURBO</h1>
-    <p class="text-xl text-gray-200">Професійний ремонт дизельних систем в Одесі.<br> ТНВД, форсунки, турбіни – швидко та якісно!</p>
-    <div class="flex flex-wrap gap-4">
-      <a href="#contact" class="inline-block bg-primary text-dark font-semibold px-6 py-3 rounded hover:bg-yellow-400 transition">
-        Записатись на діагностику
-      </a>
-      <a href="tel:+380964047707" class="inline-flex items-center text-primary border border-primary px-6 py-3 rounded hover:bg-primary hover:text-dark transition animate-pulse">
+      <!-- CTA кнопка десктоп -->
+      <a href="tel:+380964047707" class="hidden lg:inline-flex items-center bg-dark text-white font-bold px-6 py-3 rounded-lg hover:bg-black hover:scale-105 transition-all shadow-lg">
         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
         </svg>
-        📞 Подзвонити зараз
+        Подзвонити
       </a>
+
+      <!-- МОБІЛЬНА КНОПКА МЕНЮ -->
+      <button id="menu-btn" class="mobile-menu-btn focus:outline-none p-2 hover:bg-yellow-300 rounded transition" aria-label="Відкрити меню">
+        <svg class="w-7 h-7" fill="none" stroke="black" stroke-width="2.5" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
   </div>
-  
-  <!-- Image -->
-  <div class="lg:w-1/2" data-aos="fade-left">
-    <img src="banner.png" alt="Професійний ремонт дизельних систем" class="rounded-lg shadow-xl max-w-full max-h-[800px]" width="600" height="400" loading="eager" />
+
+  <!-- МОБІЛЬНЕ МЕНЮ -->
+  <div id="mobile-menu" class="md:hidden hidden bg-primary border-t-2 border-dark">
+    <div class="px-4 py-3 space-y-1">
+      <!-- Послуги з підменю -->
+      <div>
+        <button id="mobile-services-btn" class="flex items-center justify-between w-full text-dark hover:text-black transition font-bold py-3 border-b border-dark/20">
+          <span>📋 Послуги</span>
+          <svg id="mobile-services-icon" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-services-submenu" class="hidden bg-dark/10 mt-1 rounded-lg">
+          <a href="remont-pnvt.html" class="block px-4 py-3 text-dark hover:bg-dark hover:text-primary transition font-medium">🔩 Ремонт ТНВД</a>
+          <a href="remont-forsunok.html" class="block px-4 py-3 text-dark hover:bg-dark hover:text-primary transition font-medium">💉 Ремонт форсунок</a>
+          <a href="remont-nasos-forsunok.html" class="block px-4 py-3 text-dark hover:bg-dark hover:text-primary transition font-medium">⚙️ Ремонт насос-форсунок</a>
+          <a href="remont-turbin.html" class="block px-4 py-3 text-dark hover:bg-dark hover:text-primary transition font-medium">🌀 Ремонт турбін</a>
+          <a href="chiptuning.html" class="block px-4 py-3 text-dark hover:bg-dark hover:text-primary transition font-medium">⚡ Chip Tuning</a>
+        </div>
+      </div>
+      <a href="#advantages" class="block text-dark hover:text-black transition font-bold py-3 border-b border-dark/20">⭐ Переваги</a>
+      <a href="#reviews" class="block text-dark hover:text-black transition font-bold py-3 border-b border-dark/20">💬 Відгуки</a>
+      <a href="#contact" class="block text-dark hover:text-black transition font-bold py-3 border-b border-dark/20">📞 Контакти</a>
+      
+      <!-- CTA мобільна -->
+      <div class="pt-3 space-y-2">
+        <a href="tel:+380964047707" class="block bg-dark text-white text-center font-bold px-6 py-4 rounded-lg hover:bg-black transition shadow-lg">
+          📞 Подзвонити: 096 404 77 07
+        </a>
+        <a href="https://t.me/dieselturbo_odesa" target="_blank" class="block bg-blue-500 text-white text-center font-bold px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+          💬 Telegram
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 🚀 СУПЕР HERO СЕКЦІЯ - МАКСИМАЛЬНА КОНВЕРСІЯ -->
+<section class="relative bg-gradient-to-br from-dark via-[#1a1a1a] to-dark py-12 sm:py-20 px-4 sm:px-6 overflow-hidden">
+  <!-- Анімований фон -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full filter blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+      <!-- Текстовий контент -->
+      <div class="lg:w-1/2 space-y-6 text-center lg:text-left z-10" data-aos="fade-right">
+        <!-- Бейдж -->
+        <div class="inline-flex items-center bg-primary/20 border-2 border-primary rounded-full px-4 py-2 backdrop-blur-sm">
+          <span class="text-primary font-bold text-sm sm:text-base">⭐ №1 в Одесі з ремонту дизелів</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+          <span class="text-primary">DIESEL</span>
+          <span class="block text-white">&</span>
+          <span class="text-primary">TURBO</span>
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-gray-200 max-w-xl mx-auto lg:mx-0">
+          Професійний ремонт <span class="text-primary font-bold">ТНВД, форсунок, турбін</span> в Одесі. 
+          <span class="block mt-2 text-primary">⚡ Швидко, якісно, з гарантією!</span>
+        </p>
+
+        <!-- Переваги -->
+        <div class="grid grid-cols-2 gap-4 max-w-lg mx-auto lg:mx-0">
+          <div class="bg-dark/50 backdrop-blur-sm border border-primary/30 rounded-lg p-3 text-center">
+            <div class="text-2xl font-bold text-primary">12 міс</div>
+            <div class="text-sm text-gray-300">гарантія</div>
+          </div>
+          <div class="bg-dark/50 backdrop-blur-sm border border-primary/30 rounded-lg p-3 text-center">
+            <div class="text-2xl font-bold text-primary">1-2 дні</div>
+            <div class="text-sm text-gray-300">швидкий ремонт</div>
+          </div>
+        </div>
+
+        <!-- CTA кнопки -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="tel:+380964047707" 
+             onclick="gtag_report_conversion('tel:+380964047707')"
+             class="group relative inline-flex items-center justify-center bg-primary text-dark font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-2xl overflow-hidden">
+            <span class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+            <svg class="relative w-6 h-6 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            <span class="relative">📞 Подзвонити ЗАРАЗ</span>
+          </a>
+          
+          <a href="#services" class="inline-flex items-center justify-center text-primary border-2 border-primary px-8 py-4 rounded-xl hover:bg-primary hover:text-dark transition-all font-bold">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            </svg>
+            Наші послуги
+          </a>
+        </div>
+
+        <!-- Додатковий текст -->
+        <div class="flex items-center justify-center lg:justify-start gap-2 text-sm text-gray-400">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>✅ Безкоштовна консультація | ✅ Виїзд на діагностику</span>
+        </div>
+      </div>
+      
+      <!-- Зображення -->
+      <div class="lg:w-1/2 relative z-10" data-aos="fade-left">
+        <div class="relative">
+          <!-- Світіння навколо зображення -->
+          <div class="absolute -inset-4 bg-primary/20 rounded-2xl blur-xl"></div>
+          <img src="banner.png" 
+               alt="Професійний ремонт дизельних систем в Одесі" 
+               class="relative rounded-2xl shadow-2xl border-4 border-primary/50 max-w-full h-auto transform hover:scale-105 transition-transform duration-500" 
+               width="600" 
+               height="400" 
+               loading="eager" />
+          
+          <!-- Бейдж на зображенні -->
+          <div class="absolute -bottom-4 -right-4 bg-primary text-dark font-bold px-6 py-3 rounded-full shadow-xl border-4 border-dark transform rotate-12 animate-bounce">
+            🔥 ХІТ СЕЗОНУ
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Швидкі посилання на послуги -->
+    <div class="mt-12 lg:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+      <a href="remont-pnvt.html" class="group bg-[#1a1a1a] hover:bg-primary border border-primary/30 rounded-xl p-4 text-center transition-all transform hover:scale-105">
+        <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🔩</div>
+        <div class="font-bold text-primary group-hover:text-dark">ТНВД</div>
+      </a>
+      <a href="remont-forsunok.html" class="group bg-[#1a1a1a] hover:bg-primary border border-primary/30 rounded-xl p-4 text-center transition-all transform hover:scale-105">
+        <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">💉</div>
+        <div class="font-bold text-primary group-hover:text-dark">Форсунки</div>
+      </a>
+      <a href="remont-turbin.html" class="group bg-[#1a1a1a] hover:bg-primary border border-primary/30 rounded-xl p-4 text-center transition-all transform hover:scale-105">
+        <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🌀</div>
+        <div class="font-bold text-primary group-hover:text-dark">Турбіни</div>
+      </a>
+      <a href="chiptuning.html" class="group bg-[#1a1a1a] hover:bg-primary border border-primary/30 rounded-xl p-4 text-center transition-all transform hover:scale-105">
+        <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">⚡</div>
+        <div class="font-bold text-primary group-hover:text-dark">Chip Tuning</div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -274,19 +453,59 @@ function gtag_report_conversion(url) {
     ↑
   </button>
 
-  <!-- Floating Call Button -->
-  <a href="tel:+380964047707" class="fixed bottom-24 right-6 bg-green-500 text-white font-bold py-4 px-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 animate-bounce flex items-center justify-center" aria-label="Зателефонувати" style="width: 60px; height: 60px;">
-    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-    </svg>
+  <!-- 🔥 ПЛАВАЮЧІ КНОПКИ - ЗАВЖДИ ВИДИМІ -->
+  <!-- Телефон праворуч -->
+  <a href="tel:+380964047707" 
+     onclick="gtag_report_conversion('tel:+380964047707')"
+     class="floating-phone group"
+     aria-label="Подзвонити +380 96 404 77 07">
+    <div class="relative flex items-center">
+      <!-- Іконка телефону -->
+      <div class="bg-green-500 text-white rounded-full p-4 shadow-2xl transform group-hover:scale-110 transition-all animate-pulse group-hover:animate-none">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+        </svg>
+      </div>
+      <!-- Підказка при наведенні -->
+      <div class="absolute right-full mr-3 bg-green-500 text-white px-4 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap font-bold hidden md:block">
+        📞 096 404 77 07<br>
+        <span class="text-xs">Дзвоніть ЗАРАЗ!</span>
+      </div>
+    </div>
   </a>
 
-  <!-- Floating Telegram Button -->
-  <a href="https://t.me/dieselturbo_odesa" target="_blank" class="fixed bottom-24 left-6 bg-blue-500 text-white font-bold py-4 px-4 rounded-full shadow-2xl hover:bg-blue-600 transition z-50 flex items-center justify-center" aria-label="Написати в Telegram" style="width: 60px; height: 60px;">
-    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.25l-1.226 5.786c-.094.45-.339.731-.864.731-.528 0-.75-.257-.969-.562l-2.695-3.452-1.307 1.246c-.144.144-.265.265-.539.265-.346 0-.304-.149-.431-.525l-.863-2.85-2.248-.703c-.489-.151-.498-.489.113-.731l8.773-3.383c.431-.149.83.126.643.645z"></path>
-    </svg>
+  <!-- Telegram ліворуч -->
+  <a href="https://t.me/dieselturbo_odesa" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="floating-telegram group"
+     aria-label="Написати в Telegram">
+    <div class="relative flex items-center">
+      <!-- Іконка Telegram -->
+      <div class="bg-blue-500 text-white rounded-full p-4 shadow-2xl transform group-hover:scale-110 transition-all hover:bg-blue-600">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.25l-1.226 5.786c-.094.45-.339.731-.864.731-.528 0-.75-.257-.969-.562l-2.695-3.452-1.307 1.246c-.144.144-.265.265-.539.265-.346 0-.304-.149-.431-.525l-.863-2.85-2.248-.703c-.489-.151-.498-.489.113-.731l8.773-3.383c.431-.149.83.126.643.645z"></path>
+        </svg>
+      </div>
+      <!-- Підказка при наведенні -->
+      <div class="absolute left-full ml-3 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap font-bold hidden md:block">
+        💬 Telegram<br>
+        <span class="text-xs">Пишіть!</span>
+      </div>
+    </div>
   </a>
+
+  <!-- Додаткова кнопка знизу на мобільних -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-green-600 to-green-500 shadow-2xl border-t-4 border-primary">
+    <a href="tel:+380964047707" 
+       onclick="gtag_report_conversion('tel:+380964047707')"
+       class="flex items-center justify-center text-white font-bold py-4 px-6 text-lg active:bg-green-700">
+      <svg class="w-6 h-6 mr-3 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+      </svg>
+      📞 ПОДЗВОНИТИ: 096 404 77 07
+    </a>
+  </div>
 
   <!-- ВОЛНА SVG снизу -->
   <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none" style="height: 60px;" aria-hidden="true">
